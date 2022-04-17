@@ -1,6 +1,8 @@
-import { FC, useState } from 'react'
+import '../styles/globals.css'
+
 import { AppProps } from 'next/app'
-import { QueryClientProvider, QueryClient } from 'react-query'
+import { FC, useState } from 'react'
+import { QueryClient, QueryClientProvider } from 'react-query'
 import { ReactQueryDevtools } from 'react-query/devtools'
 
 const MyApp: FC<AppProps> = ({ Component, pageProps }: AppProps) => {
