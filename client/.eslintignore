@@ -8,3 +8,4 @@ jest.config.ts
 postcss.config.js
 *.d.ts
 tailwind.config.js
+next.config.js
