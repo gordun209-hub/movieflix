@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer base {
+  h1 {
+    @apply text-2xl;
+  }
+  input {
+    @apply text-xl;
+  }
+}
+@layer components {
+  .inpt-main {
+    @apply relative m-0 block w-full min-w-0 flex-auto rounded border border-solid border-gray-darker bg-white bg-clip-padding px-3 py-1.5 text-base font-normal text-gray-darker transition ease-in-out focus:border-blue-600 focus:bg-white focus:text-gray-darker focus:outline-none;
+  }
+  .form-btn {
+    @apply inline-block rounded border-2 border-blue-600 px-6 py-2 text-xs font-medium uppercase leading-tight text-blue-600 transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0;
+  }
+}
