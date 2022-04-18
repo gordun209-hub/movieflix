@@ -1,4 +1,4 @@
-const SearchMovie = ({ searchParams, setSearchParams, refetch }) => {
+const SearchMovie = ({ searchParams, setSearchParams }) => {
   return (
     <div>
       <div>
@@ -19,7 +19,7 @@ const SearchMovie = ({ searchParams, setSearchParams, refetch }) => {
                 type='button'
                 id='button-addon3'
                 onClick={() => {
-                  refetch()
+                  console.log(searchParams)
                 }}
               >
                 Search
