@@ -16,8 +16,8 @@ const Movies = () => {
     }
   )
   return (
-    <div>
-      <h1 className='pt-2 text-center text-3xl text-slate-700'>Movies</h1>
+    <div className='bg-slate-600'>
+      <h1 className='pt-2 text-center text-3xl text-slate-200'>Movies</h1>
       <SearchMovie
         searchParams={searchParams}
         setSearchParams={setSearchParams}
@@ -25,7 +25,7 @@ const Movies = () => {
       />
       {isLoading && isFetching && <Spinner />}
       {data && (
-        <div className='flex flex-wrap justify-evenly gap-6    text-center'>
+        <div className='flex flex-wrap justify-evenly gap-6 bg-slate-600    text-center'>
           {data?.results.map(movie => (
             <Card key={movie.id} movie={movie} />
           ))}
