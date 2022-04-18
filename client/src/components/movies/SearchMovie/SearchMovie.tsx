@@ -1,4 +1,7 @@
-const SearchMovie = ({ searchParams, setSearchParams }) => {
+import { useState } from 'react'
+
+const SearchMovie = ({ setSearchParams }) => {
+  const [searchString, setSearchString] = useState('')
   return (
     <div>
       <div>
@@ -7,19 +10,19 @@ const SearchMovie = ({ searchParams, setSearchParams }) => {
             <div className='input-group relative mb-4  flex w-full   items-stretch'>
               <input
                 type='search'
-                value={searchParams}
+                value={searchString}
                 className='inpt-main input-group'
                 placeholder='Search'
                 aria-label='Search'
                 aria-describedby='button-addon3'
-                onChange={e => setSearchParams(e.target.value)}
+                onChange={e => setSearchString(e.target.value)}
               />
               <button
                 className='form-btn'
                 type='button'
                 id='button-addon3'
                 onClick={() => {
-                  console.log(searchParams)
+                  setSearchParams(searchString)
                 }}
               >
                 Search
