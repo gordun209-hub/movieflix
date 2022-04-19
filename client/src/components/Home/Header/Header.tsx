@@ -17,17 +17,25 @@ export default function Header() {
           >
             <path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'></path>
           </svg>
-          <span className='ml-3 text-xl'>MovieFlix</span>
+
+          <span className='ml-3 text-xl'>
+            <Link passHref href='/'>
+              <a>MovieFlix</a>
+            </Link>
+          </span>
         </a>
         <nav className='md:border-gray-400 flex flex-wrap items-center justify-center text-base	md:mr-auto md:ml-4 md:border-l md:py-1 md:pl-4'>
           <Link href={'/movies'}>
-            <a className='hover:text-gray-900 mr-5'>Movies/Tv Series</a>
+            <a className='hover:text-gray-900 mr-5'>Movies</a>
           </Link>{' '}
-          <Link href={'/ranks'}>
-            <a className='hover:text-gray-900 mr-5'>Rankings</a>
+          <Link href={'/tvSeries'}>
+            <a className='hover:text-gray-900 mr-5'>Tv series</a>
+          </Link>{' '}
+          <Link href={'/genre'}>
+            <a className='hover:text-gray-900 mr-5'>genre</a>
           </Link>{' '}
           <Link href={'/celebs'}>
-            <a className='hover:text-gray-900 mr-5'>Celebs</a>
+            <a className='hover:text-gray-900 mr-5'>Imdb top</a>
           </Link>
         </nav>
         <div className='bg-gray-100 hover:bg-gray-200 mt-4 inline-flex items-center rounded border-0 py-1 px-3 text-base focus:outline-none md:mt-0'>

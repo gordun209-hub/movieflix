@@ -1,4 +1,15 @@
-const SearchMovie = ({ searchParams, setSearchParams, refetch }) => {
+import { FC } from 'react'
+
+type TSearchMovie = {
+  searchParams: string | undefined
+  setSearchParams: (searchParams: string | undefined) => void
+  refetch: () => void
+}
+const SearchMovie: FC<TSearchMovie> = ({
+  searchParams,
+  setSearchParams,
+  refetch
+}) => {
   return (
     <div>
       <div>

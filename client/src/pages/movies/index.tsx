@@ -5,8 +5,15 @@ import { Card, SearchMovie } from '../../components/movies'
 import { Spinner } from '../../components/Spinner'
 import { searchMovieQuery } from '../../services/searchMovies'
 
+type movie = {
+  id: string
+  title: string
+  image: string
+  description: string
+  resultType: string
+}
 const Movies = () => {
-  const [searchParams, setSearchParams] = useState()
+  const [searchParams, setSearchParams] = useState<string | undefined>()
   const { data, isLoading, refetch, isFetching } = useQuery(
     ['movies'],
     () => searchMovieQuery(searchParams),
@@ -26,7 +33,7 @@ const Movies = () => {
       {isLoading && isFetching && <Spinner />}
       {data && (
         <div className='flex flex-wrap justify-evenly gap-6 bg-slate-600    text-center'>
-          {data?.results.map(movie => (
+          {data?.results.map((movie: movie) => (
             <Card key={movie.id} movie={movie} />
           ))}
         </div>
