@@ -14,6 +14,12 @@ export const api = createApi({
         url: `/Search/${apiKey}/${searchString}`,
         method: 'GET'
       })
+    }),
+    genres: builder.query({
+      query: genre => ({
+        url: `/Genre/${apiKey}/${genre}`,
+        method: 'GET'
+      })
     })
   })
 })
