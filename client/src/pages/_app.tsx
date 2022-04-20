@@ -11,11 +11,13 @@ const MyApp: FC<AppProps> = ({ Component, pageProps }: AppProps) => {
   // eslint-disable-next-line react/hook-use-state
   const [queryClient] = useState(() => new QueryClient())
   return (
-    <QueryClientProvider client={queryClient}>
-      <Header />
-      <Component {...pageProps} />
-      <ReactQueryDevtools initialIsOpen={false} />
-    </QueryClientProvider>
+    <>
+      <QueryClientProvider client={queryClient}>
+        <Header />
+        <Component {...pageProps} />
+        <ReactQueryDevtools initialIsOpen={false} />
+      </QueryClientProvider>
+    </>
   )
 }
 

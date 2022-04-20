@@ -13,9 +13,9 @@ const SearchMovie: FC<TSearchMovie> = ({
   return (
     <div>
       <div>
-        <div className='flex  justify-center'>
+        <div className='flex justify-center'>
           <div className='mb-3 xl:w-96'>
-            <div className='input-group relative mb-4  flex w-full   items-stretch'>
+            <div className='input-group relative mb-4 flex w-full items-stretch'>
               <input
                 type='search'
                 value={searchParams}
