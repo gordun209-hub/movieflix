@@ -49,7 +49,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const res = await searchGenreQuery(params?.genre as string)
-  console.log(res)
   return {
     props: {
       res
