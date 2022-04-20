@@ -21,9 +21,9 @@ const GenrePage: NextPage<Tres> = ({ res }) => {
   return (
     <>
       <div className='flex flex-wrap justify-center gap-4 pt-10'>
-        {res.results.map(movie => (
+        {res?.results.map(movie => (
           <div key={movie.id}>
-            <GenreCard img={movie.image} />
+            <GenreCard img={movie.image} id={movie.id} />
           </div>
         ))}
       </div>
