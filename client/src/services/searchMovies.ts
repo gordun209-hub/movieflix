@@ -11,10 +11,10 @@ export const searchGenreQuery = async (genre: string) => {
   const data = await response.json()
   return data
 }
-
+// https://imdb-api.com/en/API/Search/k_bc7sy7fp/inception
 export const searchMovieByIdQuery = async (title: string) => {
   const response = await fetch(
-    `https://imdb-api.com/en/API/Title/k_t0zj84io/${title}/FullActor,Posters`
+    `https://imdb-api.com/en/API/Title/k_t0zj84io/tt1375666/FullActor,Posters,Trailer`
   )
   const data = await response.json()
   return data
