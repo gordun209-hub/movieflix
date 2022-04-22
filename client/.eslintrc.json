@@ -3,15 +3,18 @@
   "extends": [
     "eslint:recommended",
     "plugin:import/recommended",
+    "plugin:@next/next/recommended",
     "plugin:react-hooks/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:ramda/recommended",
+    "plugin:react-redux/recommended",
     "plugin:react/recommended",
     "plugin:prettier/recommended"
   ],
   "plugins": [
     "@typescript-eslint",
     "import",
+    "react-redux",
     "react",
     "react-hooks",
     "simple-import-sort",

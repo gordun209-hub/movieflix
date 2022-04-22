@@ -1,13 +1,16 @@
-import { useState } from 'react'
+import { FC, useState } from 'react'
 
-const SearchMovie = ({ setSearchParams }) => {
+type Props = {
+  setSearchParams: (searchParams: string) => void
+}
+const SearchMovie: FC<Props> = ({ setSearchParams }) => {
   const [searchString, setSearchString] = useState('')
   return (
     <div>
       <div>
-        <div className='flex  justify-center'>
+        <div className='flex justify-center'>
           <div className='mb-3 xl:w-96'>
-            <div className='input-group relative mb-4  flex w-full   items-stretch'>
+            <div className='input-group relative mb-4 flex w-full items-stretch'>
               <input
                 type='search'
                 value={searchString}

@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-//    https://imdb-api.com/en/API/SearchMovie//inception 2010
-//https://imdb-api.com/en/API/Search/k_t0zj84io/${search}
-//    https://imdb-api.com/en/API/SearchEpisode//London
+
+import type { Movie, movieSearch } from '../types/movieType'
+
 const apiKey = 'k_hd2hitvi'
 
 export const api = createApi({
@@ -9,7 +9,7 @@ export const api = createApi({
     baseUrl: 'https://imdb-api.com/en/API'
   }),
   endpoints: builder => ({
-    search: builder.query({
+    search: builder.query<movieSearch, string | undefined>({
       query: searchString => ({
         url: `/Search/${apiKey}/${searchString}`,
         method: 'GET'
@@ -20,10 +20,16 @@ export const api = createApi({
         url: `/Genre/${apiKey}/${genre}`,
         method: 'GET'
       })
+    }),
+    searchMovieById: builder.query<Movie, string | undefined>({
+      query: id => ({
+        url: `/Title/${apiKey}/${id}/FullActor,Posters,Trailer`,
+        method: 'GET'
+      })
     })
   })
 })
 
-export const { useSearchQuery } = api
+export const { useSearchQuery, useGenresQuery, useSearchMovieByIdQuery } = api
 
 export default api
