@@ -19,8 +19,8 @@ export default function Header({
   runtimeStr
 }: Props) {
   return (
-    <div className='grid-col-2 grid grid-flow-col justify-evenly font-serif'>
-      <div>
+    <div className='grid-col-2 grid grid-flow-col justify-between font-serif'>
+      <div className='pl-8'>
         <p className='pt-8 text-4xl text-white'>{title}</p>
         <p className='pt-2 text-slate-400'>
           {releaseDate.substring(0, 4)} {contentRating} {runtimeStr}

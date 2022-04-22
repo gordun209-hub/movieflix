@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 type ImageWithPlotProps = {
   genreList: [{ key: string; value: string }]
   image: string
@@ -9,24 +10,26 @@ export default function ImageWithPlot({
   plot
 }: ImageWithPlotProps) {
   return (
-    <div className='grid grid-cols-2 gap-4 pt-12'>
-      <div className='col-span-1 min-h-full w-fit justify-end'>
-        <div>
+    <div className='m-8 grid grid-cols-2 items-center justify-center gap-2 border-4 border-orange-300 p-24'>
+      <div className=''>
+        <span>
           {genreList.map(({ key, value }) => {
             return (
-              <div
+              <span
                 key={key}
-                className='prose m-2 inline-flex h-14 items-center rounded-full border-2 border-black px-2 text-center'
+                className='w-18 prose inline h-16 items-center rounded-full border-2 border-black px-2 text-center text-white'
               >
                 {value}
-              </div>
+              </span>
             )
           })}
+        </span>
+        <div className='h-1/2 w-4/5'>
+          <img className='w-full' src={image} />
         </div>
-        <img src={image} />
       </div>
-      <div className='col-span-1 self-center lg:prose-xl'>
-        <p className='px-4 pt-8 text-white'>{plot}</p>
+      <div className='prose-xl place-self-center text-center'>
+        <p className='text-white md:text-lg lg:text-3xl'>{plot}</p>
       </div>
     </div>
   )

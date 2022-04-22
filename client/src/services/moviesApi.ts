@@ -21,7 +21,7 @@ export const api = createApi({
         method: 'GET'
       })
     }),
-    searchMovieById: builder.query<Movie, string | undefined>({
+    searchMovieById: builder.query<Movie, string | undefined | string[]>({
       query: id => ({
         url: `/Title/${apiKey}/${id}/FullActor,Posters,Trailer`,
         method: 'GET'

@@ -49,7 +49,7 @@ export type Movie = {
   keywordList: string[]
   keywords: string
   languageList: [{ key: string; value: string }]
-  language: string
+  languages: string
   metacriticRating: string
   plot: string
   plotLocal: string
