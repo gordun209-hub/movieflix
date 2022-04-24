@@ -14,7 +14,7 @@ export type Movie = {
   boxOffice: {
     budget: string
     cumulativeWorldwideGross: string
-    gorssUSA: string
+    grossUSA: string
     openingWeekendUSA: string
   }
   companies: string
@@ -147,4 +147,35 @@ export type movieSearch = {
       description: string
     }
   ]
+}
+
+export type BasicTabsProps = {
+  actorList: {
+    id: string
+    name: string
+    image: string
+    asCharacter: string
+  }[]
+  posters: {
+    imdbId: string
+    title: string
+    fullTitle: string
+    type: string
+    year: string
+
+    posters: {
+      id: string
+      link: string
+      aspectRatio: number
+      language: string
+      width: number
+      height: number
+    }[]
+  }
+  boxOffice: {
+    budget: string
+    openingWeekendUSA: string
+    grossUSA: string
+    cumulativeWorldwideGross: string
+  }
 }

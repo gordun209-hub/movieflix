@@ -21,13 +21,13 @@ export default function Header({
   return (
     <div className='grid-col-2 grid grid-flow-col justify-between font-serif'>
       <div className='pl-8'>
-        <p className='pt-8 text-4xl text-white'>{title}</p>
-        <p className='pt-2 text-slate-400'>
+        <p className='pt-8 text-4xl text-slate-800'>{title}</p>
+        <p className='pt-2 text-slate-800'>
           {releaseDate.substring(0, 4)} {contentRating} {runtimeStr}
         </p>
       </div>
       <div>
-        <div className='flex justify-center gap-4 pt-8 text-slate-200'>
+        <div className='flex justify-center gap-4 pt-8 text-slate-800'>
           <div>
             <p className='mb-1'>Imdb rating </p>
             <div className='flex items-center gap-2'>
@@ -35,7 +35,9 @@ export default function Header({
                 <Image width={25} height={35} src={'/star.png'} />
               </div>
               <div>
-                <p className='mr-1 inline text-lg text-white'>{imDbRating}</p>
+                <p className='mr-1 inline text-lg text-slate-800'>
+                  {imDbRating}
+                </p>
                 <span>/10</span>
                 <p>{imdbRatingVotes}</p>
               </div>
@@ -43,7 +45,7 @@ export default function Header({
           </div>
           <div>
             <p>Your rating</p>
-            <div className='flex items-center justify-center gap-2 pt-2 text-sky-600'>
+            <div className='flex items-center justify-center gap-2 pt-2 text-slate-800'>
               <Image
                 width={30}
                 color={'blue'}

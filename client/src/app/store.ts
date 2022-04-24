@@ -1,12 +1,12 @@
 /* eslint-disable import/no-named-as-default */
 import { configureStore } from '@reduxjs/toolkit'
 
-import counterReducer from '../features//counterSlice'
+import contentToShowReducer from '../features/ContentToShow/contentToShowSlice'
 import api from '../services/moviesApi'
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    contentToShow: contentToShowReducer,
     [api.reducerPath]: api.reducer
   },
   middleware: getDefaultMiddleware =>

@@ -25,7 +25,7 @@ export default function MovieWriterStarDirector({
             return (
               <div
                 key={id}
-                className='prose inline-flex items-center px-2 text-center text-white'
+                className='prose inline-flex items-center px-2 text-center text-slate-800'
               >
                 <span> {name}</span>
               </div>
@@ -37,7 +37,7 @@ export default function MovieWriterStarDirector({
           {writerList.map(({ id, name }) => (
             <div
               key={id}
-              className='prose inline-flex items-center px-2 text-center text-white'
+              className='prose inline-flex items-center px-2 text-center text-slate-800'
             >
               <span> {name}</span>
             </div>
@@ -48,7 +48,7 @@ export default function MovieWriterStarDirector({
           {starList.map(({ id, name }) => (
             <div
               key={id}
-              className='prose inline-flex items-center px-2 text-center text-white'
+              className='prose inline-flex items-center px-2 text-center text-slate-800'
             >
               <span> {name}</span>
             </div>
@@ -56,24 +56,25 @@ export default function MovieWriterStarDirector({
         </div>
         {awards && (
           <div>
-            <span>Awards: </span> <span className='text-white'>{awards}</span>
+            <span>Awards: </span>{' '}
+            <span className='text-slate-800'>{awards}</span>
           </div>
         )}
       </div>
       <div className='col-span-1 flex-row gap-4'>
         <span>Countries: </span>
-        <span className='prose inline-flex items-center px-2 text-center text-white'>
+        <span className='prose inline-flex items-center px-2 text-center text-slate-800'>
           {countries}
         </span>
         <div>
           <span>Companies:</span>
-          <span className='prose inline-flex items-center px-2 text-center text-white'>
+          <span className='prose inline-flex items-center px-2 text-center text-slate-800'>
             {companies}
           </span>
         </div>
         <div>
           <span>Languages:</span>
-          <span className='prose inline-flex items-center px-2 text-center text-white'>
+          <span className='prose inline-flex items-center px-2 text-center text-slate-800'>
             {languages}
           </span>
         </div>

@@ -17,7 +17,7 @@ export default function ImageWithPlot({
             return (
               <span
                 key={key}
-                className='w-18 prose inline h-16 items-center rounded-full border-2 border-black px-2 text-center text-white'
+                className='w-18 prose inline h-16 items-center rounded-full border-2 border-black px-2 text-center text-slate-800'
               >
                 {value}
               </span>
@@ -29,7 +29,7 @@ export default function ImageWithPlot({
         </div>
       </div>
       <div className='prose-xl place-self-center text-center'>
-        <p className='text-white md:text-lg lg:text-3xl'>{plot}</p>
+        <p className='text-slate-800 md:text-lg lg:text-3xl'>{plot}</p>
       </div>
     </div>
   )
