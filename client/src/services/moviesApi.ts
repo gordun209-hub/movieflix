@@ -1,6 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 import type { Movie, movieSearch } from '../types/movieType'
+import type { TStar } from '../types/starType'
 
 const apiKey = 'k_hd2hitvi'
 
@@ -26,10 +27,21 @@ export const api = createApi({
         url: `/Title/${apiKey}/${id}/FullActor,Posters,Trailer`,
         method: 'GET'
       })
+    }),
+    searchStarById: builder.query<TStar, string>({
+      query: id => ({
+        url: `https://imdb-api.com/en/API/Name/k_hd2hitvi/${id}`,
+        method: 'GET'
+      })
     })
   })
 })
 
-export const { useSearchQuery, useGenresQuery, useSearchMovieByIdQuery } = api
+export const {
+  useSearchQuery,
+  useGenresQuery,
+  useSearchMovieByIdQuery,
+  useLazySearchStarByIdQuery
+} = api
 
 export default api
