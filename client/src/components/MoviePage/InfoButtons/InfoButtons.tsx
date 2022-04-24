@@ -24,7 +24,7 @@ const InfoButtons = () => {
         sx={{
           display: 'flex',
 
-          justifyContent: 'start',
+          justifyContent: 'center',
           alignItems: 'center',
           width: '100%',
           marginTop: '30px'
