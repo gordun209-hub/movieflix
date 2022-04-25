@@ -7,7 +7,11 @@
     "plugin:react-hooks/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:ramda/recommended",
+<<<<<<< HEAD
     "plugin:react-redux/recommended",
+=======
+
+>>>>>>> master
     "plugin:react/recommended",
     "plugin:prettier/recommended"
   ],
@@ -31,6 +35,7 @@
     "simple-import-sort/exports": "warn",
     "react/button-has-type": 1,
     "react/destructuring-assignment": 1,
+    "no-console": "warn",
     "react/hook-use-state": 1,
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",

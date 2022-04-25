@@ -1,9 +1,16 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 
 import GenreCard from '../../components/movies/Card/GenreCard'
+<<<<<<< HEAD
 
 type Tres = {
   data: {
+=======
+import { searchGenreQuery } from '../../services/searchMovies'
+
+type Tres = {
+  res: {
+>>>>>>> master
     results: {
       id: string
       image: string
@@ -16,11 +23,19 @@ type Tres = {
     }[]
   }
 }
+<<<<<<< HEAD
 const GenrePage: NextPage<Tres> = ({ data }: Tres) => {
   return (
     <>
       <div className='flex flex-wrap justify-center gap-4 pt-10'>
         {data?.results.map(movie => (
+=======
+const GenrePage: NextPage<Tres> = ({ res }) => {
+  return (
+    <>
+      <div className='flex flex-wrap justify-center gap-4 pt-10'>
+        {res?.results.map(movie => (
+>>>>>>> master
           <div key={movie.id}>
             <GenreCard img={movie.image} id={movie.id} />
           </div>
@@ -47,6 +62,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
+<<<<<<< HEAD
   const res = await fetch(
     `https://imdb-api.com/en/API/AdvancedSearch/k_hd2hitvi/?genres=${params?.genre}`
   )
@@ -54,6 +70,12 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return {
     props: {
       data
+=======
+  const res = await searchGenreQuery(params?.genre as string)
+  return {
+    props: {
+      res
+>>>>>>> master
     }
   }
 }

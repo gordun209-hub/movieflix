@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import { Button } from '@mui/material'
+=======
+>>>>>>> master
 import { GetStaticProps } from 'next'
 import Link from 'next/link'
 import { FC } from 'react'
@@ -19,6 +22,7 @@ type movie = {
 const genres = ['action', 'family', 'comedy', 'horror', 'animation', 'drama']
 const Movies: FC<movie> = ({ data }) => {
   return (
+<<<<<<< HEAD
     <div className='grid   grid-flow-row  gap-4 bg-slate-600'>
       <div className=''>
         <h1 className='prose  pt-2 text-center text-3xl text-slate-200'>
@@ -34,6 +38,21 @@ const Movies: FC<movie> = ({ data }) => {
                 >
                   <p className=' pt-2 text-center'>{genre}</p>
                 </Button>
+=======
+    <div className='grid bg-slate-600'>
+      <div className=''>
+        <h1 className='pt-2 text-center text-3xl text-slate-200'>Movies</h1>
+        <div>
+          <div className='flex justify-center gap-4'>
+            {genres.map(genre => (
+              <Link key={`/movies/${genre}`} passHref href={`/movies/${genre}`}>
+                <div
+                  key={genre}
+                  className='flex h-12 flex-grow cursor-pointer justify-center bg-slate-900 text-slate-300'
+                >
+                  <p className='pt-2 text-center'>{genre}</p>
+                </div>
+>>>>>>> master
               </Link>
             ))}
           </div>
@@ -63,3 +82,13 @@ export const getStaticProps: GetStaticProps = async () => {
   }
 }
 export default Movies
+
+// const [searchParams, setSearchParams] = useState<string | undefined>()
+// const { data, isLoading, refetch, isFetching } = useQuery(
+//   ['movies'],
+//   () => searchMovieQuery(searchParams),
+//   {
+//     enabled: false,
+//     refetchOnWindowFocus: false
+//   }
+// )

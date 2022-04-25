@@ -9,11 +9,21 @@ import { Header } from '../components/Home'
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
+<<<<<<< HEAD
     <Provider store={store}>
       <CssBaseline />
       <Header />
       <Component {...pageProps} />
     </Provider>
+=======
+    <>
+      <QueryClientProvider client={queryClient}>
+        <Header />
+        <Component {...pageProps} />
+        <ReactQueryDevtools initialIsOpen={false} />
+      </QueryClientProvider>
+    </>
+>>>>>>> master
   )
 }
 

@@ -2,10 +2,10 @@ import Image from 'next/image'
 
 export default function Hero() {
   return (
-    <section className='text-info-dark body-font bg-brand-light'>
-      <div className='container mx-auto flex px-5 py-24 md:flex-row flex-col items-center'>
-        <div className='lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center'>
-          <h1 className='title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-darkest'>
+    <section className='body-font bg-brand-light text-info-dark'>
+      <div className='container mx-auto flex flex-col items-center px-5 py-24 md:flex-row'>
+        <div className='mb-16 flex flex-col items-center text-center md:mb-0 md:w-1/2 md:items-start md:pr-16 md:text-left lg:flex-grow lg:pr-24'>
+          <h1 className='title-font mb-4 text-3xl font-medium text-gray-darkest sm:text-4xl'>
             Explore Movies and Celebrities
             <br className='hidden lg:inline-block' />
             on MovieFlix
@@ -19,15 +19,15 @@ export default function Hero() {
           <div className='flex justify-center'>
             <button
               type='button'
-              className='inline-flex text-info-light bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg'
+              className='inline-flex rounded border-0 bg-indigo-500 py-2 px-6 text-lg text-info-light hover:bg-indigo-600 focus:outline-none'
             >
               Explore
             </button>
           </div>
         </div>
-        <div className='lg:max-w-lg text-info-light lg:w-full md:w-1/2 w-5/6'>
+        <div className='w-5/6 text-info-light md:w-1/2 lg:w-full lg:max-w-lg'>
           <Image
-            className='object-cover object-center rounded'
+            className='rounded object-cover object-center'
             alt='hero'
             width={720}
             height={600}
