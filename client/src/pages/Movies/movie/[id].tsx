@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ImageList, ImageListItem } from '@mui/material'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
@@ -28,30 +27,6 @@ export const Movies = () => {
   const router = useRouter()
   const { id } = router.query
   const { data, error, isLoading } = useSearchMovieByIdQuery(id)
-=======
-import { useRouter } from 'next/router'
-import { useQuery } from 'react-query'
-
-import { Header, ImageWithPlot } from '../../../components/MoviePage/index'
-import { Spinner } from '../../../components/Spinner'
-import { searchMovieByIdQuery } from '../../../services/searchMovies'
-import type { Movie } from '../../../types/movieType'
-
-export const Movies = () => {
-  const router = useRouter()
-  const { id } = router.query
-  const { data, error, isLoading } = useQuery<Movie>(
-    ['singleMovieInfo'],
-    () => searchMovieByIdQuery(id as string),
-    {
-      refetchOnMount: false,
-      refetchInterval: 1000000000,
-      refetchOnWindowFocus: false,
-      refetchOnReconnect: false,
-      refetchIntervalInBackground: false
-    }
-  )
->>>>>>> master
 
   {
     isLoading && <Spinner />
@@ -87,7 +62,6 @@ export const Movies = () => {
               writerList={data.writerList}
               starList={data.starList}
               awards={data.awards}
-<<<<<<< HEAD
               companies={data.companies}
               countries={data.countries}
               languages={data.languages}
@@ -105,15 +79,10 @@ export const Movies = () => {
           )}
           {isShowActors && <ActorList actorList={data.actorList} />}
           {isShowPosters && <MovieInfo posters={data.posters} />}
-=======
-            />
-          }
->>>>>>> master
         </>
       )}
     </>
   )
-<<<<<<< HEAD
   type MovieInfoProps = {
     posters: {
       imdb: string
@@ -151,62 +120,6 @@ export const Movies = () => {
           </ImageListItem>
         ))}
       </ImageList>
-=======
-
-  type MovieWriterStarDirectorProps = {
-    directorList: [{ id: string; name: string }]
-    writerList: [{ id: string; name: string }]
-    starList: [{ id: string; name: string }]
-    awards: string
-  }
-  function MovieWriterStarDirector({
-    directorList,
-    writerList,
-    starList,
-    awards
-  }: MovieWriterStarDirectorProps) {
-    return (
-      <div className='flex-row gap-4 pl-2'>
-        <div>
-          <span>Directors: </span>
-          {directorList.map(({ id, name }) => {
-            return (
-              <div
-                key={id}
-                className='prose inline-flex items-center px-2 text-center text-white'
-              >
-                <span> {name}</span>
-              </div>
-            )
-          })}
-        </div>
-        <div>
-          <span>Writers: </span>
-          {writerList.map(({ id, name }) => (
-            <div
-              key={id}
-              className='prose inline-flex items-center px-2 text-center text-white'
-            >
-              <span> {name}</span>
-            </div>
-          ))}
-        </div>
-        <div>
-          <span>Stars: </span>
-          {starList.map(({ id, name }) => (
-            <div
-              key={id}
-              className='prose inline-flex items-center px-2 text-center text-white'
-            >
-              <span> {name}</span>
-            </div>
-          ))}
-        </div>
-        <div>
-          <span>Awards: </span> <span className='text-white'>{awards}</span>
-        </div>
-      </div>
->>>>>>> master
     )
   }
 }

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { FC, useState } from 'react'
 
 type Props = {
@@ -6,20 +5,6 @@ type Props = {
 }
 const SearchMovie: FC<Props> = ({ setSearchParams }) => {
   const [searchString, setSearchString] = useState('')
-=======
-import { FC } from 'react'
-
-type TSearchMovie = {
-  searchParams: string | undefined
-  setSearchParams: (searchParams: string | undefined) => void
-  refetch: () => void
-}
-const SearchMovie: FC<TSearchMovie> = ({
-  searchParams,
-  setSearchParams,
-  refetch
-}) => {
->>>>>>> master
   return (
     <div>
       <div>

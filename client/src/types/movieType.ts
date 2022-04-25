@@ -14,11 +14,7 @@ export type Movie = {
   boxOffice: {
     budget: string
     cumulativeWorldwideGross: string
-<<<<<<< HEAD
     grossUSA: string
-=======
-    gorssUSA: string
->>>>>>> master
     openingWeekendUSA: string
   }
   companies: string
@@ -53,11 +49,7 @@ export type Movie = {
   keywordList: string[]
   keywords: string
   languageList: [{ key: string; value: string }]
-<<<<<<< HEAD
   languages: string
-=======
-  language: string
->>>>>>> master
   metacriticRating: string
   plot: string
   plotLocal: string
@@ -142,7 +134,6 @@ export type Movie = {
     }
   ]
 }
-<<<<<<< HEAD
 
 export type movieSearch = {
   searchType: string
@@ -188,5 +179,3 @@ export type BasicTabsProps = {
     cumulativeWorldwideGross: string
   }
 }
-=======
->>>>>>> master

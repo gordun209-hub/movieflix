@@ -3,10 +3,11 @@ import { configureStore } from '@reduxjs/toolkit'
 
 import contentToShowReducer from '../features/ContentToShow/contentToShowSlice'
 import api from '../services/moviesApi'
-
+import FilterContentReducer from '../features/FilterContentBy/FilterContentBy'
 export const store = configureStore({
   reducer: {
     contentToShow: contentToShowReducer,
+    filterContent: FilterContentReducer,
     [api.reducerPath]: api.reducer
   },
   middleware: getDefaultMiddleware =>

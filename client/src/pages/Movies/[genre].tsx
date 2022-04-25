@@ -1,41 +1,45 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
+import { useAppSelector } from '../../app/hooks'
 
 import GenreCard from '../../components/movies/Card/GenreCard'
-<<<<<<< HEAD
+import SelectItem from '../../components/movies/SelectItem/SelectItem'
+import { selectSortBy } from '../../features/FilterContentBy/FilterContentBy'
 
 type Tres = {
   data: {
-=======
-import { searchGenreQuery } from '../../services/searchMovies'
-
-type Tres = {
-  res: {
->>>>>>> master
     results: {
       id: string
       image: string
       description: string
       runtimeStr: string
       genres: string[]
-      imdbRating: string
+      imDbRating: string
       plot: string
       stars: string
+      imDbRatingVotes: string
+      releaseDate: string
+      title: string
     }[]
   }
 }
-<<<<<<< HEAD
 const GenrePage: NextPage<Tres> = ({ data }: Tres) => {
+  const sortBy = useAppSelector(selectSortBy)
+  const sortedMovies = data.results.sort((a, b) => {
+    if (sortBy === 'imdb-rating') {
+      return parseFloat(b.imDbRating) - parseFloat(a.imDbRating)
+    } else if (sortBy === 'number-of-votes') {
+      return parseFloat(b.imDbRatingVotes) - parseFloat(a.imDbRatingVotes)
+    } else if (sortBy === 'title') {
+      return a.title.localeCompare(b.title)
+    } else {
+      return 0
+    }
+  })
   return (
     <>
+      <SelectItem />
       <div className='flex flex-wrap justify-center gap-4 pt-10'>
-        {data?.results.map(movie => (
-=======
-const GenrePage: NextPage<Tres> = ({ res }) => {
-  return (
-    <>
-      <div className='flex flex-wrap justify-center gap-4 pt-10'>
-        {res?.results.map(movie => (
->>>>>>> master
+        {sortedMovies?.map(movie => (
           <div key={movie.id}>
             <GenreCard img={movie.image} id={movie.id} />
           </div>
@@ -62,7 +66,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-<<<<<<< HEAD
   const res = await fetch(
     `https://imdb-api.com/en/API/AdvancedSearch/k_hd2hitvi/?genres=${params?.genre}`
   )
@@ -70,12 +73,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return {
     props: {
       data
-=======
-  const res = await searchGenreQuery(params?.genre as string)
-  return {
-    props: {
-      res
->>>>>>> master
     }
   }
 }
