@@ -7,11 +7,7 @@
     "plugin:react-hooks/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:ramda/recommended",
-<<<<<<< HEAD
     "plugin:react-redux/recommended",
-=======
-
->>>>>>> master
     "plugin:react/recommended",
     "plugin:prettier/recommended"
   ],

@@ -149,33 +149,67 @@ export type movieSearch = {
   ]
 }
 
-export type BasicTabsProps = {
-  actorList: {
-    id: string
-    name: string
-    image: string
-    asCharacter: string
-  }[]
-  posters: {
-    imdbId: string
-    title: string
-    fullTitle: string
-    type: string
-    year: string
-
-    posters: {
+export type IndexMovie = {
+  data: {
+    items: {
+      crew: string
+      fullTitle: string
       id: string
-      link: string
-      aspectRatio: number
-      language: string
-      width: number
-      height: number
+      imDbRating: string
+      imDbRatingCount: string
+      image: string
+      rank: string
+      rankUpDown: string
+      title: string
+      year: string
     }[]
   }
-  boxOffice: {
-    budget: string
-    openingWeekendUSA: string
-    grossUSA: string
-    cumulativeWorldwideGross: string
+}
+export type SearchByGenreType = {
+  data: {
+    results: {
+      id: string
+      image: string
+      description: string
+      runtimeStr: string
+      genres: string[]
+      imDbRating: string
+      plot: string
+      stars: string
+      imDbRatingVotes: string
+      releaseDate: string
+      title: string
+    }[]
+  }
+}
+export type MovieInfoProps = {
+  posters: {
+    imdb: string
+    title: string
+    fullTitle: string
+    year: string
+    type: string
+    errorMessage: string | null
+
+    posters: {
+      link: string
+      id: string
+    }[]
+  }
+}
+export type PopularMovies = {
+  data: {
+    items: {
+      crew: string
+      fullTitle: string
+      id: string
+      imDbRating: string
+      imDbRatingCount: string
+      image: string
+      rank: string
+      rankUpDown: string
+      title: string
+      year: string
+    }[]
   }
 }

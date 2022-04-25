@@ -1,5 +1,3 @@
-import { ImageList, ImageListItem } from '@mui/material'
-import Image from 'next/image'
 import { useRouter } from 'next/router'
 import * as React from 'react'
 
@@ -9,9 +7,10 @@ import {
   BoxOffice,
   Header,
   ImageWithPlot,
-  InfoButtons
+  InfoButtons,
+  MovieInfo
 } from '../../../components/MoviePage/index'
-import MovieWriterStarDirector from '../../../components/MoviePage/MovieInfo/MovieInfo'
+import { MoviePosters } from '../../../components/movies/index'
 import { Spinner } from '../../../components/Spinner'
 import {
   selectShowActors,
@@ -57,8 +56,8 @@ export const Movies = () => {
             />
           }
           {
-            <MovieWriterStarDirector
-              directorList={data.directorList}
+            <MovieInfo
+              directorList={data?.directorList}
               writerList={data.writerList}
               starList={data.starList}
               awards={data.awards}
@@ -78,50 +77,11 @@ export const Movies = () => {
             />
           )}
           {isShowActors && <ActorList actorList={data.actorList} />}
-          {isShowPosters && <MovieInfo posters={data.posters} />}
+          {isShowPosters && <MoviePosters posters={data.posters} />}
         </>
       )}
     </>
   )
-  type MovieInfoProps = {
-    posters: {
-      imdb: string
-      title: string
-      fullTitle: string
-      year: string
-      type: string
-      errorMessage: string | null
-
-      posters: {
-        link: string
-        id: string
-      }[]
-    }
-  }
-  function MovieInfo({ posters }: MovieInfoProps) {
-    return (
-      <ImageList
-        sx={{
-          width: '100%',
-          height: '100%',
-          padding: '0 1rem'
-        }}
-        cols={3}
-      >
-        {posters.posters.map(poster => (
-          <ImageListItem key={poster.id}>
-            <Image
-              src={`${poster.link} `}
-              width={1564}
-              height={1564}
-              alt={'laa'}
-              loading='lazy'
-            />
-          </ImageListItem>
-        ))}
-      </ImageList>
-    )
-  }
 }
 
 export default Movies

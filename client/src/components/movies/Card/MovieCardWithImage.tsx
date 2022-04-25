@@ -10,7 +10,7 @@ type props = {
 const GenreCard: FC<props> = ({ img, id }) => {
   return (
     <div>
-      <Link passHref href={`/Movies/movie/${id}`}>
+      <Link passHref href={`/movies/movie/${id}`}>
         <div>
           <Image src={img} width={300} height={300} />
         </div>

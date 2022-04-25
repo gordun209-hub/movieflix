@@ -21,7 +21,7 @@ export default function MovieWriterStarDirector({
       <div className='col-span-1 flex-row gap-4'>
         <div>
           <span>Directors: </span>
-          {directorList.map(({ id, name }) => {
+          {directorList?.map(({ id, name }) => {
             return (
               <div
                 key={id}

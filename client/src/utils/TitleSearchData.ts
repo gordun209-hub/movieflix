@@ -1,5 +1,3 @@
-// can include FullActor FullcAst Posters Images Trailer Ratings and Wikipedia
-// https://imdb-api.com/en/API/Title/k_t0zj84io/tt1375666/FullActor,FullCast,Posters,Images,Trailer,Ratings,Wikipedia,
 export const TitleSearchData = {
   id: 'tt1375666',
   title: 'Inception',

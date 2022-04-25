@@ -3,17 +3,21 @@ import Link from 'next/link'
 
 type Movie = {
   movie: {
+    crew: string
+    fullTitle: string
     id: string
-    resultType: string
-    image: string
-    title: string
-    description: string
     imDbRating: string
+    imDbRatingCount: string
+    image: string
+    rank: string
+    rankUpDown: string
+    title: string
+    year: string
   }
 }
 const Card = ({ movie }: Movie) => {
   return (
-    <Link passHref href={`/Movies/movie/${movie.id}`}>
+    <Link passHref href={`/movies/movie/${movie.id}`}>
       <div className=' w-64 bg-slate-500 pt-2'>
         <div>
           <Image src={movie.image} width={200} height={300} />

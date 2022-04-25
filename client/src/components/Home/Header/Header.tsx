@@ -25,16 +25,16 @@ export default function Header() {
           </div>
         </div>
         <div className='md:border-gray-400 flex flex-wrap items-center justify-center text-base md:mr-auto md:ml-4 md:border-l md:py-1 md:pl-4'>
-          <Link href={'/Movies'}>
+          <Link href={'/movies'}>
             <a className='hover:text-gray-900 mr-5'>Movies</a>
           </Link>{' '}
-          <Link href={'/TvSeries'}>
+          <Link href={'/tvSeries'}>
             <a className='hover:text-gray-900 mr-5'>Tv series</a>
           </Link>{' '}
-          <Link href={'/Stars'}>
+          <Link href={'/stars'}>
             <a className='hover:text-gray-900 mr-5'>Stars</a>
           </Link>{' '}
-          <Link href={'/ImdbTop'}>
+          <Link href={'/imdbTop'}>
             <a className='hover:text-gray-900 mr-5'>Imdb top</a>
           </Link>
         </div>
