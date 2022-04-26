@@ -1,21 +1,24 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { FC } from 'react'
 
-import type { MovieCardProps } from '@/types/movieType'
+import { CardProps } from '@/types/CardProps'
 
-const Card = ({ movie }: MovieCardProps) => {
+const Card: FC<CardProps> = ({ id, img, imDbRating, title }) => {
   return (
-    <Link passHref href={`/movies/movie/${movie.id}`}>
-      <div className=' w-64 bg-slate-500 pt-2'>
-        <div>
-          <Image src={movie.image} width={200} height={300} />
+    <div className='flex min-h-full max-w-[200px]'>
+      <Link passHref href={`/movies/movie/${id}`}>
+        <div className='bg-slate-500 '>
+          <div>
+            <Image src={img} width={200} height={300} />
+          </div>
+          <div>
+            <h1>{title} </h1>
+            <p> Imdb : {imDbRating}</p>
+          </div>
         </div>
-        <div>
-          <h1 className=' '>{movie.title} </h1>
-          <p> Imdb : {movie.imDbRating}</p>
-        </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   )
 }
 export default Card

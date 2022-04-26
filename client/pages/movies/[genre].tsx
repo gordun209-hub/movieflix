@@ -1,8 +1,8 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 
 import { useAppSelector } from '@/app/hooks'
-import GenreCard from '@/components/movies/Card/MovieCardWithImage'
-import SelectItem from '@/components/movies/SelectItem/SelectItem'
+import { GenreNav } from '@/components/GenreNav'
+import { Card, SelectItem } from '@/components/movies'
 import { selectSortBy } from '@/features/FilterContentBy/FilterContentBy'
 import type { SearchByGenreType } from '@/types/movieType'
 import fetchProps from '@/utils/fetchProps'
@@ -15,11 +15,17 @@ const GenrePage: NextPage<SearchByGenreType> = ({
   const sortMovies = sortedMovies(data?.results, sortBy)
   return (
     <>
+      <GenreNav />
       <SelectItem />
-      <div className='flex flex-wrap justify-center gap-4 pt-10'>
+      <div className='flex  min-w-full flex-wrap justify-center gap-4   text-center'>
         {sortMovies?.map(movie => (
           <div key={movie.id}>
-            <GenreCard img={movie.image} id={movie.id} />
+            <Card
+              img={movie.image}
+              title={movie.title}
+              id={movie.id}
+              imDbRating={movie.imDbRating}
+            />
           </div>
         ))}
       </div>

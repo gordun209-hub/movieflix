@@ -12,7 +12,7 @@ const SelectItem = () => {
   const dispatch = useAppDispatch()
 
   return (
-    <Box justifySelf={'end'} p={4}>
+    <Box justifySelf={'end'} p={2}>
       <FormControl>
         <InputLabel id='demo-simple-select-label'>SortBy</InputLabel>
         <Select
@@ -22,9 +22,9 @@ const SelectItem = () => {
           label='Age'
           onChange={e => dispatch(setSortBy(e.target.value))}
         >
-          <MenuItem value={'imdb-rating'}>sort by imdb rating</MenuItem>
-          <MenuItem value={'number-of-votes'}>sort by number of votes</MenuItem>
-          <MenuItem value={'title'}>sort by title</MenuItem>
+          <MenuItem value={'imdb-rating'}>imdb rating</MenuItem>
+          <MenuItem value={'number-of-votes'}>number of votes</MenuItem>
+          <MenuItem value={'title'}> title</MenuItem>
         </Select>
       </FormControl>
     </Box>

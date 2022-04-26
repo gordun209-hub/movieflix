@@ -1,16 +1,17 @@
 import Image from 'next/image'
 
-import { HeaderProps } from '@/types/headerProps'
+import type { HeaderProps } from '@/types/headerProps'
 
-export default function Header({
-  title,
-  imDbRating,
-  imdbRatingVotes,
-  metacriticRating,
-  releaseDate,
-  contentRating,
-  runtimeStr
-}: HeaderProps) {
+export default function Header({ props }: HeaderProps) {
+  const {
+    contentRating,
+    imDbRating,
+    imdbRatingVotes,
+    metacriticRating,
+    releaseDate,
+    runtimeStr,
+    title
+  } = props
   return (
     <div className='grid-col-2 grid grid-flow-col justify-between pr-12 font-serif'>
       <div className='pl-8'>

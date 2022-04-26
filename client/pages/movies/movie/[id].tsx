@@ -38,17 +38,7 @@ export const Movies = () => {
     <>
       {data && (
         <>
-          {
-            <Header
-              title={data?.title}
-              imDbRating={data?.imDbRating}
-              imdbRatingVotes={data?.imdbRatingVotes}
-              metacriticRating={data?.metacriticRating}
-              releaseDate={data?.releaseDate}
-              contentRating={data?.contentRating}
-              runtimeStr={data?.runtimeStr}
-            />
-          }
+          {<Header props={data} />}
 
           {
             <ImageWithPlot
