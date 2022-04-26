@@ -1,4 +1,5 @@
 import { Box, Button, ButtonGroup } from '@mui/material'
+import smoothscroll from 'smoothscroll-polyfill'
 
 import { useAppDispatch, useAppSelector } from '../../../app/hooks'
 import {
@@ -32,9 +33,9 @@ const InfoButtons = () => {
       >
         <Button
           type='button'
-          onClick={() =>
+          onClick={() => {
             isShowActors ? dispatch(hideActors()) : dispatch(showActors())
-          }
+          }}
         >
           See Actors
         </Button>

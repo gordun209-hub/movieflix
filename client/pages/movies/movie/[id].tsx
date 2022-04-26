@@ -2,15 +2,15 @@ import { useRouter } from 'next/router'
 import * as React from 'react'
 
 import { useAppSelector } from '../../../app/hooks'
-import { ActorList } from '../../../components/MoviePage/ActorList/ActorList'
 import {
+  ActorList,
   BoxOffice,
   Header,
   ImageWithPlot,
   InfoButtons,
-  MovieInfo
+  MovieInfo,
+  MoviePosters
 } from '../../../components/MoviePage/index'
-import { MoviePosters } from '../../../components/movies/index'
 import { Spinner } from '../../../components/Spinner'
 import {
   selectShowActors,
@@ -48,6 +48,7 @@ export const Movies = () => {
               runtimeStr={data?.runtimeStr}
             />
           }
+
           {
             <ImageWithPlot
               genreList={data.genreList}
@@ -66,6 +67,7 @@ export const Movies = () => {
               languages={data.languages}
             />
           }
+
           <InfoButtons />
 
           {isShowBoxOffice && (

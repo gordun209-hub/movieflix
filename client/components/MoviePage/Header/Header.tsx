@@ -19,7 +19,7 @@ export default function Header({
   runtimeStr
 }: Props) {
   return (
-    <div className='grid-col-2 grid grid-flow-col justify-between font-serif'>
+    <div className='grid-col-2 grid grid-flow-col justify-between pr-12 font-serif'>
       <div className='pl-8'>
         <p className='pt-8 text-4xl text-slate-800'>{title}</p>
         <p className='pt-2 text-slate-800'>
@@ -55,10 +55,12 @@ export default function Header({
               <span>Rate</span>
             </div>
           </div>
-          <div className='text-center'>
-            <p>Metacritics Rating</p>
-            <p className='text-2xl font-bold'>{metacriticRating}</p>
-          </div>
+          {metacriticRating && metacriticRating !== '' && (
+            <div className='text-center'>
+              <p>Metacritics Rating</p>
+              <p className='text-2xl font-bold'>{metacriticRating}</p>
+            </div>
+          )}
         </div>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import { ImageList, ImageListItem } from '@mui/material'
 import Image from 'next/image'
+import smoothscroll from 'smoothscroll-polyfill'
 
 import { MovieInfoProps } from '../../../types/movieType'
 
@@ -9,7 +10,8 @@ export default function MovieInfo({ posters }: MovieInfoProps) {
       sx={{
         width: '100%',
         height: '100%',
-        padding: '0 1rem'
+        padding: '0 1rem',
+        scrollBehavior: 'smooth'
       }}
       cols={3}
     >

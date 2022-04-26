@@ -31,12 +31,18 @@ const BoxOffice: FC<TBoxOffice> = ({
             {budget && <Typography variant='body1'>{budget}</Typography>}
             <Divider />
             <Typography variant='body1'>
-              Opening weekend usa : {openingWeekendUSA}
+              Opening weekend USA :{' '}
+              {openingWeekendUSA === '' ? 'N/A' : openingWeekendUSA}
             </Typography>
             <Typography variant='body1'>
-              Cumulative worldwide gorss: {cumulativeWorldWideGross}
+              Cumulative worldwide gorss:{' '}
+              {cumulativeWorldWideGross === ''
+                ? 'N/A'
+                : cumulativeWorldWideGross}
             </Typography>
-            <Typography variant='body1'>gross USA :{grossUSA}</Typography>
+            <Typography variant='body1'>
+              gross USA :{grossUSA === '' ? 'N/A' : grossUSA}
+            </Typography>
           </Card>
         </Box>
       </Box>

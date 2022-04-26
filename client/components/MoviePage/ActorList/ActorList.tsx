@@ -4,15 +4,9 @@ import Typography from '@mui/material/Typography'
 import Image from 'next/image'
 import * as React from 'react'
 
-export type ActorList = {
-  actorList: {
-    id: string
-    name: string
-    image: string
-    asCharacter: string
-  }[]
-}
-export function ActorList({ actorList }: ActorList) {
+import type { TActorList } from '../../../types/actorList'
+
+export default function ActorList({ actorList }: TActorList) {
   return (
     <Box>
       <Divider
@@ -53,9 +47,18 @@ export function ActorList({ actorList }: ActorList) {
               }}
             >
               <Image src={image} width={100} height={100} />
-              <Typography variant='body1'>{name}</Typography>
+              {name === '' ? (
+                <Typography variant='body1'>No name</Typography>
+              ) : (
+                <Typography variant='body2'>{name}</Typography>
+              )}
+
               <Divider />
-              <Typography variant='body1'>{asCharacter}</Typography>
+              {asCharacter === '' ? (
+                <Typography variant='body1'>No character</Typography>
+              ) : (
+                <Typography variant='body1'>{asCharacter}</Typography>
+              )}
             </Card>
           ))}
         </Box>

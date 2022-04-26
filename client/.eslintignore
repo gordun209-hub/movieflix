@@ -1,5 +1,5 @@
 node-modules/
-
+jest.config.js
 coverage/
 dist/
 public/
@@ -9,3 +9,4 @@ postcss.config.js
 *.d.ts
 tailwind.config.js
 next.config.js
+jest.setup.js
