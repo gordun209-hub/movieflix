@@ -96,6 +96,12 @@
         "jest-dom/prefer-enabled-disabled": "error",
         "jest-dom/prefer-required": "error",
         "jest-dom/prefer-to-have-attribute": "error",
+        "jest/expect-expect": [
+          "error",
+          {
+            "assertFunctionNames": ["expect", "cy"]
+          }
+        ],
         "testing-library/await-async-query": "error",
         "testing-library/no-await-sync-query": "error",
         "testing-library/no-debugging-utils": "warn",
