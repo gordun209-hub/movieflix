@@ -1,11 +1,11 @@
 import { FormControl, InputLabel, MenuItem, Select } from '@mui/material'
 import { Box } from '@mui/system'
 
-import { useAppDispatch, useAppSelector } from '../../../app/hooks'
+import { useAppDispatch, useAppSelector } from '@/app/hooks'
 import {
   selectSortBy,
   setSortBy
-} from '../../../features/FilterContentBy/FilterContentBy'
+} from '@/features/FilterContentBy/FilterContentBy'
 
 const SelectItem = () => {
   const sortBy = useAppSelector(selectSortBy)

@@ -1,4 +1,3 @@
-// {
 type Tsearch = {
   searchType: string
   expression: string
@@ -10,10 +9,7 @@ type Tsearch = {
     title: string
   }[]
 }
-// for searching
-//     "searchType": "Title",
-//     "expression": "inception 2010",
-// https://imdb-api.com/en/API/Search/k_t0zj84io/inception%202010
+
 export const searchResult: Tsearch = {
   searchType: 'Title',
   expression: 'inception 2010',

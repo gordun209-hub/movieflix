@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import * as React from 'react'
 
+import { useAppSelector } from '@/app/hooks'
 import {
   ActorList,
   BoxOffice,
@@ -11,13 +12,12 @@ import {
   MoviePosters
 } from '@/components/MoviePage'
 import { Spinner } from '@/components/Spinner'
-
-import { useAppSelector } from '../../../app/hooks'
 import {
   selectShowActors,
   selectShowBoxOffice,
   selectShowPosters
-} from '../../../features/ContentToShow/contentToShowSlice'
+} from '@/features/ContentToShow/contentToShowSlice'
+
 import { useSearchMovieByIdQuery } from '../../../services/moviesApi'
 
 export const Movies = () => {

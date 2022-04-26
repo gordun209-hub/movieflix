@@ -1,13 +1,12 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 
+import { useAppSelector } from '@/app/hooks'
 import GenreCard from '@/components/movies/Card/MovieCardWithImage'
 import SelectItem from '@/components/movies/SelectItem/SelectItem'
+import { selectSortBy } from '@/features/FilterContentBy/FilterContentBy'
 import type { SearchByGenreType } from '@/types/movieType'
 import fetchProps from '@/utils/fetchProps'
 import { sortedMovies } from '@/utils/sortMovies'
-
-import { useAppSelector } from '../../app/hooks'
-import { selectSortBy } from '../../features/FilterContentBy/FilterContentBy'
 
 const GenrePage: NextPage<SearchByGenreType> = ({
   data

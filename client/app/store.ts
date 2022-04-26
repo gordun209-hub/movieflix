@@ -1,9 +1,9 @@
 /* eslint-disable import/no-named-as-default */
 import { configureStore } from '@reduxjs/toolkit'
 
-import contentToShowReducer from '../features/ContentToShow/contentToShowSlice'
-import FilterContentReducer from '../features/FilterContentBy/FilterContentBy'
-import api from '../services/moviesApi'
+import contentToShowReducer from '@/features/ContentToShow/contentToShowSlice'
+import FilterContentReducer from '@/features/FilterContentBy/FilterContentBy'
+import api from '@/services/moviesApi'
 
 export const store = configureStore({
   reducer: {

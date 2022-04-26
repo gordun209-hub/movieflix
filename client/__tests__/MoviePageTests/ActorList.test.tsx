@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 
-import { ActorList } from '../../components/MoviePage/index'
+import { ActorList } from '@/components/MoviePage/'
 
 test('should render ActorList', () => {
   const actorList = [

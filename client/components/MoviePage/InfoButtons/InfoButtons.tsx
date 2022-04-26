@@ -1,6 +1,6 @@
 import { Box, Button, ButtonGroup } from '@mui/material'
 
-import { useAppDispatch, useAppSelector } from '../../../app/hooks'
+import { useAppDispatch, useAppSelector } from '@/app/hooks'
 import {
   hideActors,
   hideBoxOffice,
@@ -11,7 +11,7 @@ import {
   showActors,
   showBoxOffice,
   showPosters
-} from '../../../features/ContentToShow/contentToShowSlice'
+} from '@/features/ContentToShow/contentToShowSlice'
 
 const InfoButtons = () => {
   const isShowPosters = useAppSelector(selectShowPosters)

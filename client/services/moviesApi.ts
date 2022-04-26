@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
-import type { Movie, movieSearch } from '../types/movieType'
-import type { TStar } from '../types/starType'
+import type { Movie, movieSearch } from '@/types/movieType'
+import type { TStar } from '@/types/starType'
 
 const apiKey = 'k_hd2hitvi'
 // const apiKey = 'k_t0zj84io'
