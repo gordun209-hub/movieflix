@@ -4,8 +4,9 @@ import CssBaseline from '@mui/material/CssBaseline'
 import { AppProps } from 'next/app'
 import { Provider } from 'react-redux'
 
+import { Header } from '@/components/Home'
+
 import { store } from '../app/store'
-import { Header } from '../components/Home'
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (

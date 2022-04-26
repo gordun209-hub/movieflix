@@ -1,21 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-type Movie = {
-  movie: {
-    crew: string
-    fullTitle: string
-    id: string
-    imDbRating: string
-    imDbRatingCount: string
-    image: string
-    rank: string
-    rankUpDown: string
-    title: string
-    year: string
-  }
-}
-const Card = ({ movie }: Movie) => {
+import type { MovieCardProps } from '@/types/movieType'
+
+const Card = ({ movie }: MovieCardProps) => {
   return (
     <Link passHref href={`/movies/movie/${movie.id}`}>
       <div className=' w-64 bg-slate-500 pt-2'>

@@ -1,9 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
-type ImageWithPlotProps = {
-  genreList: [{ key: string; value: string }]
-  image: string
-  plot: string
-}
+import type { ImageWithPlotProps } from '@/types/ImageWithPlotProps'
+
 export default function ImageWithPlot({
   genreList,
   image,

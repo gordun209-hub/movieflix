@@ -3,8 +3,8 @@ import { GetStaticProps } from 'next'
 import Link from 'next/link'
 import { FC } from 'react'
 
-import { Card, SelectItem } from '../../components/movies'
-import type { PopularMovies } from '../../types/movieType'
+import { Card, SelectItem } from '@/components/movies'
+import type { PopularMovies } from '@/types/movieType'
 
 const Movies: FC<PopularMovies> = ({ data }) => {
   const genres = ['action', 'family', 'comedy', 'horror', 'animation', 'drama']

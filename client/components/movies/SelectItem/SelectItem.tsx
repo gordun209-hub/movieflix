@@ -1,10 +1,12 @@
-import { FormControl, InputLabel, Select, MenuItem } from '@mui/material'
+import { FormControl, InputLabel, MenuItem, Select } from '@mui/material'
 import { Box } from '@mui/system'
-import { useAppSelector, useAppDispatch } from '../../../app/hooks'
+
+import { useAppDispatch, useAppSelector } from '../../../app/hooks'
 import {
   selectSortBy,
   setSortBy
 } from '../../../features/FilterContentBy/FilterContentBy'
+
 const SelectItem = () => {
   const sortBy = useAppSelector(selectSortBy)
   const dispatch = useAppDispatch()

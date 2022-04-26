@@ -4,7 +4,7 @@ import Typography from '@mui/material/Typography'
 import Image from 'next/image'
 import * as React from 'react'
 
-import type { TActorList } from '../../../types/actorList'
+import type { TActorList } from '@/types/actorList'
 
 export default function ActorList({ actorList }: TActorList) {
   return (

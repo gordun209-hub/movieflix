@@ -1,5 +1,4 @@
 import { Box, Button, ButtonGroup } from '@mui/material'
-import smoothscroll from 'smoothscroll-polyfill'
 
 import { useAppDispatch, useAppSelector } from '../../../app/hooks'
 import {

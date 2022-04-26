@@ -1,6 +1,8 @@
 import { Box, Card, Divider, Typography } from '@mui/material'
 import { FC } from 'react'
 
+import { TBoxOffice } from '@/types/BoxOffice'
+
 const BoxOffice: FC<TBoxOffice> = ({
   budget,
   cumulativeWorldWideGross,
@@ -35,10 +37,7 @@ const BoxOffice: FC<TBoxOffice> = ({
               {openingWeekendUSA === '' ? 'N/A' : openingWeekendUSA}
             </Typography>
             <Typography variant='body1'>
-              Cumulative worldwide gorss:{' '}
-              {cumulativeWorldWideGross === ''
-                ? 'N/A'
-                : cumulativeWorldWideGross}
+              Cumulative worldwide gorss: {cumulativeWorldWideGross}
             </Typography>
             <Typography variant='body1'>
               gross USA :{grossUSA === '' ? 'N/A' : grossUSA}
@@ -50,10 +49,3 @@ const BoxOffice: FC<TBoxOffice> = ({
   )
 }
 export default BoxOffice
-
-type TBoxOffice = {
-  budget: string
-  openingWeekendUSA: string
-  grossUSA: string
-  cumulativeWorldWideGross: string
-}

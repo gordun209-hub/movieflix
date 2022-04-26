@@ -2,8 +2,9 @@
 import { configureStore } from '@reduxjs/toolkit'
 
 import contentToShowReducer from '../features/ContentToShow/contentToShowSlice'
-import api from '../services/moviesApi'
 import FilterContentReducer from '../features/FilterContentBy/FilterContentBy'
+import api from '../services/moviesApi'
+
 export const store = configureStore({
   reducer: {
     contentToShow: contentToShowReducer,

@@ -1,7 +1,6 @@
 import { useRouter } from 'next/router'
 import * as React from 'react'
 
-import { useAppSelector } from '../../../app/hooks'
 import {
   ActorList,
   BoxOffice,
@@ -10,8 +9,10 @@ import {
   InfoButtons,
   MovieInfo,
   MoviePosters
-} from '../../../components/MoviePage/index'
-import { Spinner } from '../../../components/Spinner'
+} from '@/components/MoviePage'
+import { Spinner } from '@/components/Spinner'
+
+import { useAppSelector } from '../../../app/hooks'
 import {
   selectShowActors,
   selectShowBoxOffice,
