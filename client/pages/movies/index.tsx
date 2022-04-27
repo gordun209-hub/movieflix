@@ -2,7 +2,7 @@ import { GetStaticProps } from 'next'
 import { FC } from 'react'
 
 import { GenreNav } from '@/components/GenreNav'
-import { Card } from '@/components/movies'
+import { Card } from '@/components/Movies'
 import { apiKey } from '@/services/moviesApi'
 import type { PopularMovies } from '@/types/movieType'
 

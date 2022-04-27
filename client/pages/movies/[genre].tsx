@@ -1,8 +1,9 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 
 import { useAppSelector } from '@/app/hooks'
 import { GenreNav } from '@/components/GenreNav'
-import { Card, SelectItem } from '@/components/movies'
+import { Card, SelectItem } from '@/components/Movies'
 import { selectSortBy } from '@/features/FilterContentBy/FilterContentBy'
 import type { SearchByGenreType } from '@/types/movieType'
 import fetchProps from '@/utils/fetchProps'
@@ -43,17 +44,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-	if (params) {
-		const data = await fetchProps(params)
-		return {
-			props: {
-				data
-			}
-		}
-	}
+	//@ts-ignore
+	const data = await fetchProps(params)
 	return {
 		props: {
-			data: null
+			data
 		}
 	}
 }
