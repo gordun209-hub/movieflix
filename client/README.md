@@ -12,10 +12,10 @@ This template uses configurations for nextjs redux and react for catching common
 
 ## Features
 
-- Advanced eslint config for development
-- Live previews
-- prettier settings
-- Typescript
-- Redux toolkit
-- e2e tests with cypress
-- unit/integration tests with rtl/jest
+-   Advanced eslint config for development
+-   Live previews
+-   prettier settings
+-   Typescript
+-   Redux toolkit
+-   e2e tests with cypress
+-   unit/integration tests with rtl/jest

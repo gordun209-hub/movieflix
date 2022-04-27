@@ -1,6 +1,6 @@
 declare module '*module.css' {
-  const styles: {
-    [className: string]: string
-  }
-  export default styles
+	const styles: {
+		[className: string]: string
+	}
+	export default styles
 }

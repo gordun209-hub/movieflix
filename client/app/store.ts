@@ -6,13 +6,12 @@ import FilterContentReducer from '@/features/FilterContentBy/FilterContentBy'
 import api from '@/services/moviesApi'
 
 export const store = configureStore({
-  reducer: {
-    contentToShow: contentToShowReducer,
-    filterContent: FilterContentReducer,
-    [api.reducerPath]: api.reducer
-  },
-  middleware: getDefaultMiddleware =>
-    getDefaultMiddleware().concat(api.middleware)
+	reducer: {
+		contentToShow: contentToShowReducer,
+		filterContent: FilterContentReducer,
+		[api.reducerPath]: api.reducer
+	},
+	middleware: getDefaultMiddleware => getDefaultMiddleware().concat(api.middleware)
 })
 
 export type RootState = ReturnType<typeof store.getState>

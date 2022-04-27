@@ -3,20 +3,20 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { RootState } from '@/app/store'
 
 interface SortBy {
-  sortBy: string
+	sortBy: string
 }
 const initialState: SortBy = {
-  sortBy: 'imdb-rating'
+	sortBy: 'imdb-rating'
 }
 
 const FilterContentSlice = createSlice({
-  name: 'sortBy',
-  initialState,
-  reducers: {
-    setSortBy: (state, action: PayloadAction<string>) => {
-      state.sortBy = action.payload
-    }
-  }
+	name: 'sortBy',
+	initialState,
+	reducers: {
+		setSortBy: (state, action: PayloadAction<string>) => {
+			state.sortBy = action.payload
+		}
+	}
 })
 
 export const { setSortBy } = FilterContentSlice.actions
