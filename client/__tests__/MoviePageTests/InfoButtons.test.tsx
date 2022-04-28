@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import { Provider } from 'react-redux'
 
-import { InfoButtons } from '@/components/MoviePage/index'
+import { InfoButtons } from '@/components/MoviePage'
 
 import { store } from '../../app/store'
 

@@ -41,7 +41,7 @@ test('should render Header with no metacriticRating', () => {
 	)
 	expect(screen.getByText('title')).toBeInTheDocument()
 	expect(screen.getByText(/2005/i)).toBeInTheDocument()
-	expect(screen.getByText(/contentRating/i)).toBeInTheDocument()
+	expect(screen.getByText(/contentrating/i)).toBeInTheDocument()
 	expect(screen.getByText(/104 /i)).toBeInTheDocument()
 	expect(screen.getByText('10')).toBeInTheDocument()
 	expect(screen.getByText('imdbRatingVotes')).toBeInTheDocument()

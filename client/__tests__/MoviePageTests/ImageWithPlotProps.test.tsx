@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 
-import { ImageWithPlot } from '@/components/MoviePage/index'
+import { ImageWithPlot } from '@/components/MoviePage'
 
 test('should render ImageWithPlot', () => {
 	const genreList: [{ key: string; value: string }] = [

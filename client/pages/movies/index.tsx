@@ -8,10 +8,10 @@ import type { PopularMovies } from '@/types/movieType'
 
 const Movies: FC<PopularMovies> = ({ data }) => {
 	return (
-		<div className='grid  grid-flow-row gap-4 bg-slate-600'>
+		<div className='  bg-slate-600 p-2'>
 			<GenreNav />
 			{data && (
-				<div className='flex max-h-10 flex-wrap justify-evenly gap-6 bg-slate-600 text-center'>
+				<div className='flex max-h-10 flex-wrap justify-evenly gap-6 bg-slate-600 pt-2 text-center'>
 					{data?.items.map(movie => (
 						<Card
 							key={movie.id}

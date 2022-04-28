@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 
-import { MovieInfo } from '@/components/MoviePage/index'
+import { MovieInfo } from '@/components/MoviePage'
 
 test('should render MovieInfo', () => {
 	render(
@@ -16,5 +16,5 @@ test('should render MovieInfo', () => {
 	)
 
 	expect(screen.getByText('Jhony dep')).toBeInTheDocument()
-	expect(screen.getByText(/Writer /i)).toBeInTheDocument()
+	expect(screen.getByText(/writer /i)).toBeInTheDocument()
 })
