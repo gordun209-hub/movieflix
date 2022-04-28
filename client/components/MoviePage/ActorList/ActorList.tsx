@@ -6,7 +6,7 @@ import * as React from 'react'
 
 import type { TActorList } from '@/types/actorList'
 
-export default function ActorList({ actorList }: TActorList) {
+const ActorList = ({ actorList }: TActorList) => {
 	return (
 		<Box>
 			<Divider
@@ -66,3 +66,5 @@ export default function ActorList({ actorList }: TActorList) {
 		</Box>
 	)
 }
+
+export default ActorList

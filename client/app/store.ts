@@ -3,7 +3,7 @@ import { configureStore } from '@reduxjs/toolkit'
 
 import contentToShowReducer from '@/features/ContentToShow/contentToShowSlice'
 import FilterContentReducer from '@/features/FilterContentBy/FilterContentBy'
-import api from '@/services/moviesApi'
+import api from '@/services/movies-api'
 
 export const store = configureStore({
 	reducer: {

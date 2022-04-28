@@ -50,7 +50,7 @@ export const TitleSearchData = {
 			asCharacter: 'Cobbas Cobb'
 		}
 	],
-	fullCast: null,
+	fullCast: undefined,
 	genres: 'Action, Adventure, Sci-Fi',
 	genreList: [
 		{
@@ -111,11 +111,11 @@ export const TitleSearchData = {
 	imDbRating: '8.8',
 	imDbRatingVotes: '2259300',
 	metacriticRating: '74',
-	ratings: null,
-	wikipedia: null,
-	posters: null,
-	images: null,
-	trailer: null,
+	ratings: undefined,
+	wikipedia: undefined,
+	posters: undefined,
+	images: undefined,
+	trailer: undefined,
 	boxOffice: {
 		budget: '$160,000,000 (estimated)',
 		openingWeekendUSA: '$62,785,337',
@@ -133,7 +133,7 @@ export const TitleSearchData = {
 			imDbRating: '8.6'
 		}
 	],
-	tvSeriesInfo: null,
-	tvEpisodeInfo: null,
-	errorMessage: null
+	tvSeriesInfo: undefined,
+	tvEpisodeInfo: undefined,
+	errorMessage: undefined
 }

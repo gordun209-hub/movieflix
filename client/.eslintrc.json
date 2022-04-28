@@ -9,6 +9,7 @@
 		"plugin:ramda/recommended",
 		"plugin:react-redux/recommended",
 		"plugin:react/recommended",
+		"plugin:unicorn/all",
 		"plugin:prettier/recommended"
 	],
 	"plugins": [
@@ -19,6 +20,7 @@
 		"react-hooks",
 		"simple-import-sort",
 		"ramda",
+		"unicorn",
 		"prettier"
 	],
 
@@ -34,8 +36,21 @@
 		"no-console": "warn",
 		"react/hook-use-state": 1,
 		"react/react-in-jsx-scope": "off",
-		"react/prop-types": "off",
+		"react/prop-types": 0,
+		"import/extensions": "off",
+		"unicorn/prevent-abbreviations": "off",
+		"unicorn/filename-case": "off",
 		"react/no-array-index-key": 2,
+
+		"react/function-component-definition": [
+			"warn",
+			{
+				"namedComponents": "arrow-function",
+				"unnamedComponents": "arrow-function",
+				"arrowFunctions": "always",
+				"requireReturnForObjectComponents": true
+			}
+		],
 		"react/no-typos": 2,
 		// "react/jsx-curly-spacing": [2, "always"],
 		"react/jsx-sort-props": [

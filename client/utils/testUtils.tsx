@@ -8,7 +8,7 @@ import { Provider } from 'react-redux'
 // Import your own reducer
 import contentToShowReducer from '@/features/ContentToShow/contentToShowSlice'
 import FilterContentReducer from '@/features/FilterContentBy/FilterContentBy'
-import { api } from '@/services/moviesApi'
+import { api } from '@/services/movies-api'
 
 // function render(
 // 	ui: JSX.Element,
@@ -44,11 +44,11 @@ function render(
 				filterContent: FilterContentReducer,
 				[api.reducerPath]: api.reducer
 			},
-			middleware: getDefaultMiddleware => getDefaultMiddleware().concat(api.middleware)
+			middleware: getDefaultMiddleware => [...getDefaultMiddleware(), api.middleware]
 		})
 	} = {}
 ) {
-	function Wrapper({ children }: { children: React.ReactNode }) {
+	const Wrapper = ({ children }: { children: React.ReactNode }) => {
 		return <Provider store={store}>{children}</Provider>
 	}
 	return rtlRender(ui, { wrapper: Wrapper })

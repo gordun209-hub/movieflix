@@ -1,7 +1,7 @@
 import { Button } from '@mui/material'
 import Link from 'next/link'
 
-export default function GenreNav() {
+const GenreNav = () => {
 	const genres = ['action', 'family', 'comedy', 'horror', 'animation', 'drama']
 
 	return (
@@ -24,3 +24,4 @@ export default function GenreNav() {
 		</div>
 	)
 }
+export default GenreNav

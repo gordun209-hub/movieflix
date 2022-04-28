@@ -17,7 +17,7 @@ describe('SelectItem component renders properly with given props', () => {
 	it('can select from options', async () => {
 		render(<SelectItem />)
 
-		const options = screen.getByRole('button', { name: /sortBy/i })
+		const options = screen.getByRole('button', { name: /sortby/i })
 		await userEvent.click(options).then(async () => {
 			const title = screen.getByRole('option', { name: /title/i })
 			await userEvent.click(title)
@@ -31,11 +31,11 @@ describe('SelectItem component renders properly with given props', () => {
 	})
 	it('can select from option and dispatches proper action', async () => {
 		render(<SelectItem />)
-		const options = screen.getByRole('button', { name: /sortBy/i })
+		const options = screen.getByRole('button', { name: /sortby/i })
 		await userEvent.click(options).then(async () => {
 			const imdbRating = screen.getByRole('option', { name: /imdb rating/i })
 			await userEvent.click(imdbRating)
-			await userEvent.click(screen.getByRole('button', { name: /SortBy imdb rating/i }))
+			await userEvent.click(screen.getByRole('button', { name: /sortby imdb rating/i }))
 			await userEvent.click(screen.getByRole('option', { name: /number of votes/i }))
 			expect(imdbRating).toBeInTheDocument()
 			expect(mockDispatch).toHaveBeenCalledTimes(1)

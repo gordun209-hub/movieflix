@@ -18,15 +18,24 @@ const mockData = {
 		}
 	]
 }
-describe('Movies', () => {
+
+describe('movies', () => {
 	it('should render correctly', () => {
+		expect.hasAssertions()
+
 		render(<GenrePage data={mockData} />)
+
 		expect(screen.getByText('drama')).toBeInTheDocument()
 		expect(screen.getByRole('button', { name: /sortby imdb rating/i })).toBeInTheDocument()
 		expect(screen.getByText(/sortby/i)).toBeInTheDocument()
 	})
+
 	it('renders data correctly', () => {
+		expect.hasAssertions()
+
 		render(<GenrePage data={mockData} />)
+
 		expect(screen.getByText(/test/i)).toBeInTheDocument()
+		expect.hasAssertions()
 	})
 })

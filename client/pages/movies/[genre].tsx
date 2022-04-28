@@ -12,6 +12,7 @@ import { sortedMovies } from '@/utils/sortMovies'
 const GenrePage: NextPage<SearchByGenreType> = ({ data }: SearchByGenreType) => {
 	const sortBy = useAppSelector(selectSortBy)
 	const sortMovies = sortedMovies(data?.results, sortBy)
+
 	return (
 		<>
 			<GenreNav />
@@ -29,23 +30,47 @@ const GenrePage: NextPage<SearchByGenreType> = ({ data }: SearchByGenreType) => 
 
 export default GenrePage
 
-export const getStaticPaths: GetStaticPaths = async () => {
-	return {
-		paths: [
-			{ params: { genre: 'action' } },
-			{ params: { genre: 'family' } },
-			{ params: { genre: 'comedy' } },
-			{ params: { genre: 'horror' } },
-			{ params: { genre: 'animation' } },
-			{ params: { genre: 'drama' } }
-		],
-		fallback: false
-	}
-}
+export const getStaticPaths: GetStaticPaths = async () => ({
+	paths: [
+		{
+			params: {
+				genre: 'action'
+			}
+		},
+		{
+			params: {
+				genre: 'family'
+			}
+		},
+		{
+			params: {
+				genre: 'comedy'
+			}
+		},
+		{
+			params: {
+				genre: 'horror'
+			}
+		},
+		{
+			params: {
+				genre: 'animation'
+			}
+		},
+		{
+			params: {
+				genre: 'drama'
+			}
+		}
+	],
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+	fallback: false
+})
+
+export const getStaticProps: GetStaticProps = async ({ params: parameters }) => {
 	//@ts-ignore
-	const data = await fetchProps(params)
+	const data = await fetchProps(parameters)
+
 	return {
 		props: {
 			data

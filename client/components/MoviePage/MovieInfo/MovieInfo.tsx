@@ -1,6 +1,6 @@
 import type { MovieWriterStarDirectorProps } from '@/types/MovieWriterStarDirectorProps'
 
-export default function MovieWriterStarDirector({
+const MovieWriterStarDirector = ({
 	directorList,
 	writerList,
 	starList,
@@ -8,7 +8,7 @@ export default function MovieWriterStarDirector({
 	countries,
 	companies,
 	languages
-}: MovieWriterStarDirectorProps) {
+}: MovieWriterStarDirectorProps) => {
 	return (
 		<div className='grid grid-cols-2 px-8'>
 			<div className='col-span-1 flex-row gap-4'>
@@ -24,7 +24,7 @@ export default function MovieWriterStarDirector({
 				</div>
 				<div>
 					<span>Writers: </span>
-					{writerList.map(({ id, name }) => (
+					{writerList?.map(({ id, name }) => (
 						<div key={id} className='prose inline-flex items-center px-2 text-center text-slate-800'>
 							<span> {name}</span>
 						</div>
@@ -32,7 +32,7 @@ export default function MovieWriterStarDirector({
 				</div>
 				<div>
 					<span>Stars: </span>
-					{starList.map(({ id, name }) => (
+					{starList?.map(({ id, name }) => (
 						<div key={id} className='prose inline-flex items-center px-2 text-center text-slate-800'>
 							<span> {name}</span>
 						</div>
@@ -59,3 +59,5 @@ export default function MovieWriterStarDirector({
 		</div>
 	)
 }
+
+export default MovieWriterStarDirector

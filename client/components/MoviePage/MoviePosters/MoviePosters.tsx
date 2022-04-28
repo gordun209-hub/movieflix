@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 import { MovieInfoProps } from '@/types/movieType'
 
-export default function MovieInfo({ posters }: MovieInfoProps) {
+const MovieInfo = ({ posters }: MovieInfoProps) => {
 	return (
 		<ImageList
 			sx={{
@@ -22,3 +22,4 @@ export default function MovieInfo({ posters }: MovieInfoProps) {
 		</ImageList>
 	)
 }
+export default MovieInfo

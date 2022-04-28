@@ -1,12 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 import type { ImageWithPlotProps } from '@/types/ImageWithPlotProps'
 
-export default function ImageWithPlot({ genreList, image, plot }: ImageWithPlotProps) {
+const ImageWithPlot = ({ genreList, image, plot }: ImageWithPlotProps) => {
 	return (
 		<div className='m-8 grid grid-cols-2 items-center justify-center gap-2 border-4 border-orange-300 p-24'>
 			<div className=''>
 				<span>
-					{genreList.map(({ key, value }) => {
+					{genreList?.map(({ key, value }) => {
 						return (
 							<span
 								key={key}
@@ -27,3 +27,4 @@ export default function ImageWithPlot({ genreList, image, plot }: ImageWithPlotP
 		</div>
 	)
 }
+export default ImageWithPlot

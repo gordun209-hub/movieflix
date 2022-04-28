@@ -1,7 +1,7 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useRouter } from 'next/router'
 
 import { Movies } from '@/pages/movies/movie/[id]'
-import { useSearchMovieByIdQuery } from '@/services/moviesApi'
 import { render, screen, waitFor } from '@/utils/testUtils'
 
 jest.mock('next/router', () => ({
@@ -12,11 +12,14 @@ jest.mock('next/router', () => ({
 	}))
 }))
 
-describe('Movies', () => {
+describe('movies', () => {
 	it('should render correctly', async () => {
 		render(<Movies />)
 		await waitFor(() => {
 			expect(screen.getByText('Inception')).toBeInTheDocument()
+		})
+		await waitFor(() => {
+			expect(screen.getByText('Action')).toBeInTheDocument()
 		})
 	})
 })

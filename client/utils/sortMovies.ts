@@ -19,9 +19,9 @@ export const sortedMovies = (data: Tres, sortBy: string) => {
 		case 'title':
 			return movies.sort((a, b) => a.title.localeCompare(b.title))
 		case 'number-of-votes':
-			return movies.sort((a, b) => parseFloat(b.imDbRatingVotes) - parseFloat(a.imDbRatingVotes))
+			return movies.sort((a, b) => Number.parseFloat(b.imDbRatingVotes) - Number.parseFloat(a.imDbRatingVotes))
 		case 'imdb-rating':
-			return movies.sort((a, b) => parseFloat(b.imDbRating) - parseFloat(a.imDbRating))
+			return movies.sort((a, b) => Number.parseFloat(b.imDbRating) - Number.parseFloat(a.imDbRating))
 
 		default:
 			return movies

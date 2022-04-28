@@ -1,4 +1,4 @@
-export const mockData = {
+const mockData = {
 	items: [
 		{
 			id: 'tt0076759',
@@ -26,3 +26,5 @@ export const mockData = {
 		}
 	]
 }
+
+export default mockData

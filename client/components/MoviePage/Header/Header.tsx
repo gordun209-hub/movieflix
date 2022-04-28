@@ -2,14 +2,14 @@ import Image from 'next/image'
 
 import type { HeaderProps } from '@/types/headerProps'
 
-export default function Header({ props }: HeaderProps) {
+const Header = ({ props }: HeaderProps) => {
 	const { contentRating, imDbRating, imdbRatingVotes, metacriticRating, releaseDate, runtimeStr, title } = props
 	return (
 		<div className='grid-col-2 grid grid-flow-col justify-between pr-12 font-serif'>
 			<div className='pl-8'>
 				<p className='pt-8 text-4xl text-slate-800'>{title}</p>
 				<p className='pt-2 text-slate-800'>
-					{releaseDate.substring(0, 4)} {contentRating} {runtimeStr}
+					{releaseDate?.slice(0, 4)} {contentRating} {runtimeStr}
 				</p>
 			</div>
 			<div>
@@ -44,3 +44,4 @@ export default function Header({ props }: HeaderProps) {
 		</div>
 	)
 }
+export default Header

@@ -14,7 +14,7 @@ import {
 import { Spinner } from '@/components/Spinner'
 import { selectShowActors, selectShowBoxOffice, selectShowPosters } from '@/features/ContentToShow/contentToShowSlice'
 
-import { useSearchMovieByIdQuery } from '../../../services/moviesApi'
+import { useSearchMovieByIdQuery } from '../../../services/movies-api'
 
 export const Movies = () => {
 	const isShowPosters = useAppSelector(selectShowPosters)

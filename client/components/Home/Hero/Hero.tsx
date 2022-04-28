@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-export default function Hero() {
+const Hero = () => {
 	return (
 		<section className='body-font bg-brand-light text-info-dark'>
 			<div className='container mx-auto flex flex-col items-center px-5 py-24 md:flex-row'>
@@ -37,3 +37,5 @@ export default function Hero() {
 		</section>
 	)
 }
+
+export default Hero

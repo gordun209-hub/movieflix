@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export default function Header() {
+const Header = () => {
 	return (
 		<header className='body-font bg-brand text-gray-lighter'>
 			<div className='container mx-auto flex flex-col flex-wrap items-center p-2 md:flex-row'>
@@ -51,3 +51,4 @@ export default function Header() {
 		</header>
 	)
 }
+export default Header

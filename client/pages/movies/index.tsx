@@ -3,7 +3,7 @@ import { FC } from 'react'
 
 import { GenreNav } from '@/components/GenreNav'
 import { Card } from '@/components/Movies'
-import { apiKey } from '@/services/moviesApi'
+import { apiKey } from '@/services/movies-api'
 import type { PopularMovies } from '@/types/movieType'
 
 const Movies: FC<PopularMovies> = ({ data }) => {
