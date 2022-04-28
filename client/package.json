@@ -9,7 +9,8 @@
 		"type-check": "tsc",
 		"test": "jest --watch",
 		"format": "prettier . --write --ignore-path .gitignore && git update-index --again",
-		"cypress": "cypress open"
+		"cypress": "cypress open",
+		"jest-preview": "jest-preview"
 	},
 	"dependencies": {
 		"@reduxjs/toolkit": "^1.8.1",
@@ -68,6 +69,7 @@
 		"identity-obj-proxy": "^3.0.0",
 		"jest": "^28.0.2",
 		"jest-environment-jsdom": "^28.0.2",
+		"jest-preview": "^0.1.6",
 		"postcss": "^8.4.12",
 		"postcss-syntax": "^0.36.2",
 		"prettier": "^2.6.2",

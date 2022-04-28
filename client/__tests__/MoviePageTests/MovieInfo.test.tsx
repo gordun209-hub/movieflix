@@ -14,6 +14,7 @@ test('should render MovieInfo', () => {
 			languages={'Languages'}
 		/>
 	)
+
 	expect(screen.getByText('Jhony dep')).toBeInTheDocument()
 	expect(screen.getByText(/Writer /i)).toBeInTheDocument()
 })
