@@ -7,10 +7,9 @@
 		"build": "next build",
 		"start": "next start",
 		"type-check": "tsc",
-		"test": "jest --watch",
+		"test": "jest --watch   --detectOpenHandles",
 		"format": "prettier . --write --ignore-path .gitignore && git update-index --again",
-		"cypress": "cypress open",
-		"jest-preview": "jest-preview"
+		"cypress": "cypress open"
 	},
 	"dependencies": {
 		"@reduxjs/toolkit": "^1.8.1",
