@@ -6,6 +6,7 @@ import type { TStar } from '@/types/starType'
 // export const apiKey = 'k_hd2hitvi'
 export const apiKey = 'k_t0zj84io'
 export const api = createApi({
+	keepUnusedDataFor: process.env.NODE_ENV === 'test' ? 0 : 60,
 	baseQuery: fetchBaseQuery({
 		baseUrl: 'https://imdb-api.com/en/API'
 	}),

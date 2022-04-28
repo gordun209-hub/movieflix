@@ -8,10 +8,7 @@ const createJestConfig = nextJest({
 // Add any custom config to be passed to Jest
 const customJestConfig = {
 	setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-	transform: {
-		'^.+\\.(css|scss|sass)$': 'jest-preview/transforms/css',
-		'^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|json)$)': 'jest-preview/transforms/file'
-	},
+
 	moduleNameMapper: {
 		// Handle module aliases (this will be automatically configured for you soon)
 		'^@/components/(.*)$': '<rootDir>/components/$1',

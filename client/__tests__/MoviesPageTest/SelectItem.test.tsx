@@ -1,5 +1,6 @@
 import userEvent from '@testing-library/user-event'
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { useAppDispatch, useAppSelector } from '@/app/hooks'
 import { SelectItem } from '@/components/Movies'
 import { render, screen } from '@/utils/testUtils'
