@@ -4,4 +4,5 @@ export { default as ImageWithPlot } from './ImageWithPlotProps/ImageWithPlotProp
 export { default as InfoButtons } from './InfoButtons/InfoButtons'
 export { default as MovieInfo } from './MovieInfo/MovieInfo'
 export { default as MoviePosters } from './MoviePosters/MoviePosters'
+export { default as MovieUi } from './MovieUi/MovieUi'
 export { default as BoxOffice } from './PostOffice/PostOffice'
