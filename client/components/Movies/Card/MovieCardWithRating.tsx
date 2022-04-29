@@ -1,3 +1,4 @@
+import { Box, Divider, Typography } from '@mui/material'
 import Image from 'next/image'
 import Link from 'next/link'
 import { FC } from 'react'
@@ -7,19 +8,20 @@ import { CardProps } from '@/types/CardProps'
 
 const Card: FC<CardProps> = ({ id, img, imDbRating, title }) => {
 	return (
-		<div className='flex  min-h-full max-w-[150px]' data-cy={id}>
+		<Box display={'flex'} maxWidth={'150px'} height={'100%'} bgcolor={'ThreeDFace'} data-cy={id}>
 			<Link passHref href={`/movies/movie/${id}`}>
-				<div className='bg-slate-500 '>
-					<div>
+				<Box textAlign='match-parent'>
+					<Box>
 						<Image src={img} width={150} height={150} />
-					</div>
-					<div>
-						<h1>{title} </h1>
-						<p> Imdb : {imDbRating}</p>
-					</div>
-				</div>
+					</Box>
+					<Box>
+						<Typography>{title} </Typography>
+						<Divider />
+						<Typography> Imdb : {imDbRating ? imDbRating : 'N/A'}</Typography>
+					</Box>
+				</Box>
 			</Link>
-		</div>
+		</Box>
 	)
 }
 export default Card

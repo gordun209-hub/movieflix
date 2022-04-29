@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
+import Box from '@mui/material/Box'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 
 import { useAppSelector } from '@/app/hooks'
@@ -15,15 +16,19 @@ const GenrePage: NextPage<SearchByGenreType> = ({ data }: SearchByGenreType) => 
 
 	return (
 		<>
-			<GenreNav />
-			<SelectItem />
-			<div className='flex  min-w-full flex-wrap justify-center gap-4   text-center'>
+			<Box display={'flex'} justifyContent={'space-between'} pb={2}>
+				<Box width={'100%'}>
+					<GenreNav />
+				</Box>
+				<SelectItem />
+			</Box>
+			<Box display={'flex'} flexWrap={'wrap'} justifyContent={'center'} textAlign={'center'} gap={4}>
 				{sortMovies?.map(movie => (
-					<div key={movie.id}>
+					<Box key={movie.id}>
 						<Card img={movie.image} title={movie.title} id={movie.id} imDbRating={movie.imDbRating} />
-					</div>
+					</Box>
 				))}
-			</div>
+			</Box>
 		</>
 	)
 }

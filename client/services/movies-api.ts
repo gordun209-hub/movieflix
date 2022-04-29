@@ -1,8 +1,9 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
+import type { Top250Data } from 'types/top250Data'
 
 import type { Movie, movieSearch } from '@/types/movieType'
 import type { TStar } from '@/types/starType'
-
+// https://imdb-api.com/en/API/Top250Movies/k_12345678
 // export const apiKey = 'k_hd2hitvi'
 export const apiKey = 'k_t0zj84io'
 export const api = createApi({
@@ -14,6 +15,18 @@ export const api = createApi({
 		search: builder.query<movieSearch, string | undefined>({
 			query: searchString => ({
 				url: `/Search/${apiKey}/${searchString}`,
+				method: 'GET'
+			})
+		}),
+		imDbTop250: builder.query<Top250Data, void>({
+			query: () => ({
+				url: `/Top250Movies/${apiKey}`,
+				method: 'GET'
+			})
+		}),
+		searchStar: builder.query({
+			query: star => ({
+				url: `SearchName/${apiKey}/${star}`,
 				method: 'GET'
 			})
 		}),
@@ -38,6 +51,13 @@ export const api = createApi({
 	})
 })
 
-export const { useSearchQuery, useGenresQuery, useSearchMovieByIdQuery, useLazySearchStarByIdQuery } = api
+export const {
+	useSearchQuery,
+	useGenresQuery,
+	useImDbTop250Query,
+	useSearchMovieByIdQuery,
+	useSearchStarByIdQuery,
+	useSearchStarQuery
+} = api
 
 export default api

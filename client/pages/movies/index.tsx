@@ -1,3 +1,4 @@
+import Box from '@mui/material/Box'
 import { GetStaticProps } from 'next'
 import { FC } from 'react'
 
@@ -8,10 +9,17 @@ import type { PopularMovies } from '@/types/movieType'
 
 const Movies: FC<PopularMovies> = ({ data }) => {
 	return (
-		<div className='  bg-slate-600 p-2'>
+		<Box bgcolor={'rgb(100 100 139 / var(--tw-bg-opacity))'}>
 			<GenreNav />
 			{data && (
-				<div className='flex max-h-10 flex-wrap justify-evenly gap-6 bg-slate-600 pt-2 text-center'>
+				<Box
+					display={'flex'}
+					pt={2}
+					justifyContent={'space-evenly'}
+					flexWrap={'wrap'}
+					gap={2}
+					textAlign={'center'}
+				>
 					{data?.items.map(movie => (
 						<Card
 							key={movie.id}
@@ -22,9 +30,9 @@ const Movies: FC<PopularMovies> = ({ data }) => {
 							id={movie.id}
 						/>
 					))}
-				</div>
+				</Box>
 			)}
-		</div>
+		</Box>
 	)
 }
 

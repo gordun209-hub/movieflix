@@ -1,5 +1,5 @@
-import { FormControl, InputLabel, MenuItem, Select } from '@mui/material'
-import { Box } from '@mui/system'
+import { FormControl, InputLabel, MenuItem, Select, Typography } from '@mui/material'
+import Box from '@mui/material/Box'
 
 import { useAppDispatch, useAppSelector } from '@/app/hooks'
 import { selectSortBy, setSortBy } from '@/features/FilterContentBy/FilterContentBy'
@@ -20,14 +20,13 @@ const SelectItem = () => {
 					onChange={e => dispatch(setSortBy(e.target.value))}
 				>
 					<MenuItem data-cy={'imdb-rating'} data-testid={'imdb-rating'} value={'imdb-rating'}>
-						imdb rating
+						<Typography>imdb rating</Typography>
 					</MenuItem>
 					<MenuItem data-cy={'number-of-votes'} data-testid={'number-of-votes'} value={'number-of-votes'}>
-						number of votes
+						<Typography>number of votes</Typography>
 					</MenuItem>
 					<MenuItem data-cy={'title'} data-testid={'title'} value={'title'}>
-						{' '}
-						title
+						<Typography>title</Typography>
 					</MenuItem>
 				</Select>
 			</FormControl>
