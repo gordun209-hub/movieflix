@@ -5,8 +5,8 @@ import type { Movie, movieSearch } from '@/types/movieType'
 import type { TStar } from '@/types/starType'
 // https://imdb-api.com/en/API/Top250Movies/k_12345678
 // export const apiKey = 'k_hd2hitvi'
-// export const apiKey = 'k_t0zj84io'
-export const apiKey = 'k_bc7sy7fp'
+export const apiKey = 'k_t0zj84io'
+// export const apiKey = 'k_bc7sy7fp'
 export const api = createApi({
 	keepUnusedDataFor: process.env.NODE_ENV === 'test' ? 0 : 60,
 	baseQuery: fetchBaseQuery({
