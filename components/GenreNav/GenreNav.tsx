@@ -10,7 +10,7 @@ const GenreNav = () => {
 		<Stack spacing={2} pt={2} display={'flex'} justifyContent={'space-evenly'} direction={'row'}>
 			{genres.map(genre => (
 				<Link key={`/movies/${genre}`} passHref href={`/movies/${genre}`}>
-					<Button key={genre} variant='contained' data-cy={genre}>
+					<Button key={genre} color='secondary' variant='contained' data-cy={genre}>
 						<Typography>{genre}</Typography>
 					</Button>
 				</Link>

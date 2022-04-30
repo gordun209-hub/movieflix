@@ -1,7 +1,7 @@
 const Footer = () => {
 	return (
-		<footer className='text-gray-600 body-font'>
-			<div className=' mx-auto flex flex-col items-center px-5  sm:flex-row'>
+		<footer className='text-gray-600 body-font sm:hidden xl:visible '>
+			<div className=' mx-auto flex flex-col items-center px-5  '>
 				<a className='title-font text-gray-900 flex items-center justify-center font-medium md:justify-start'>
 					<svg
 						xmlns='http://www.w3.org/2000/svg'

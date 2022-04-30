@@ -1,3 +1,4 @@
+import { Button, Typography } from '@mui/material'
 import Link from 'next/link'
 
 const Header = () => {
@@ -25,28 +26,38 @@ const Header = () => {
 					</div>
 				</div>
 				<div className='md:border-gray-400 flex flex-wrap items-center justify-center text-base md:mr-auto md:ml-4 md:border-l md:py-1 md:pl-4'>
-					<Link href={'/movies'}>
-						<a className='hover:text-gray-900 mr-5' data-cy={'movies'}>
+					<Link passHref href={'/movies'}>
+						<Button
+							color='secondary'
+							variant='contained'
+							className='hover:text-gray-900 mr-5'
+							data-cy={'movies'}
+						>
 							Movies
-						</a>
+						</Button>
 					</Link>{' '}
-					<Link href={'/tvSeries'} data-cy={'tvSeries'}>
-						<a className='hover:text-gray-900 mr-5'>Tv series</a>
+					<Link passHref href={'/tvSeries'} data-cy={'tvSeries'}>
+						<Button
+							color='secondary'
+							variant='contained'
+							className='hover:text-gray-900 mr-5'
+							data-cy={'movies'}
+						>
+							tvSeries
+						</Button>
 					</Link>{' '}
-					<Link href={'/stars'} data-cy={'stars'}>
-						<a className='hover:text-gray-900 mr-5'>Stars</a>
-					</Link>{' '}
-					<Link href={'/imdbTop'} data-cy={'imdbTop'}>
-						<a className='hover:text-gray-900 mr-5'>Imdb top</a>
+					<Link passHref href={'/imdbTop'} data-cy={'imdbTop'}>
+						<Button
+							color='secondary'
+							variant='contained'
+							className='hover:text-gray-900 mr-5'
+							data-cy={'movies'}
+						>
+							<Typography>Imdb Top250</Typography>
+						</Button>
 					</Link>
 				</div>
-				<div className='bg-gray-100 hover:bg-gray-200 mt-4 inline-flex items-center rounded border-0 py-1 px-3 text-base focus:outline-none md:mt-0'>
-					<Link href={'/login'}>
-						<a className='inline-flex flex-shrink-0 rounded border-0 bg-indigo-500 py-1 px-4 text-white hover:bg-indigo-600 focus:outline-none lg:mt-2 xl:mt-0'>
-							Log in
-						</a>
-					</Link>
-				</div>
+				<div className='bg-gray-100 hover:bg-gray-200 mt-4 inline-flex items-center rounded border-0 py-1 px-3 text-base focus:outline-none md:mt-0'></div>
 			</div>
 		</header>
 	)
