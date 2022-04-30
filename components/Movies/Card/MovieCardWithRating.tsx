@@ -8,7 +8,7 @@ import { CardProps } from '@/types/CardProps'
 
 const Card: FC<CardProps> = ({ id, img, imDbRating, title }) => {
 	return (
-		<Box display={'flex'} maxWidth={'150px'} height={'100%'} bgcolor={'ThreeDFace'} data-cy={id}>
+		<Box display={'flex'} maxWidth={'150px'} bgcolor={'ThreeDFace'} data-cy={id}>
 			<Link passHref href={`/movies/movie/${id}`}>
 				<Box textAlign='match-parent'>
 					<Box>

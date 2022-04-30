@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import type { MovieWriterStarDirectorProps } from '@/types/MovieWriterStarDirectorProps'
 
 const MovieWriterStarDirector = ({
@@ -16,8 +18,13 @@ const MovieWriterStarDirector = ({
 					<span>Directors: </span>
 					{directorList?.map(({ id, name }) => {
 						return (
-							<div key={id} className='prose inline-flex items-center px-2 text-center text-slate-800'>
-								<span> {name}</span>
+							<div
+								key={id}
+								className='prose inline-flex cursor-pointer items-center px-2 text-center text-slate-800'
+							>
+								<Link passHref replace href={`/actors/${id}`}>
+									<span> {name}</span>
+								</Link>
 							</div>
 						)
 					})}
@@ -25,16 +32,26 @@ const MovieWriterStarDirector = ({
 				<div>
 					<span>Writers: </span>
 					{writerList?.map(({ id, name }) => (
-						<div key={id} className='prose inline-flex items-center px-2 text-center text-slate-800'>
-							<span> {name}</span>
+						<div
+							key={id}
+							className='prose inline-flex cursor-pointer items-center px-2 text-center text-slate-800'
+						>
+							<Link passHref replace href={`/actors/${id}`}>
+								<span> {name}</span>
+							</Link>
 						</div>
 					))}
 				</div>
 				<div>
 					<span>Stars: </span>
 					{starList?.map(({ id, name }) => (
-						<div key={id} className='prose inline-flex items-center px-2 text-center text-slate-800'>
-							<span> {name}</span>
+						<div
+							key={id}
+							className='prose inline-flex cursor-pointer items-center px-2 text-center text-slate-800'
+						>
+							<Link passHref replace href={`/actors/${id}`}>
+								<span> {name}</span>
+							</Link>
 						</div>
 					))}
 				</div>

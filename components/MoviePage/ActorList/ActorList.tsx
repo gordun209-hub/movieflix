@@ -2,6 +2,7 @@ import { Card, Divider } from '@mui/material'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import Image from 'next/image'
+import Link from 'next/link'
 import * as React from 'react'
 
 import type { TActorList } from '@/types/actorList'
@@ -50,7 +51,9 @@ const ActorList = ({ actorList }: TActorList) => {
 							{name === '' ? (
 								<Typography variant='body1'>No name</Typography>
 							) : (
-								<Typography variant='body2'>{name}</Typography>
+								<Link passHref href={`/actors/${id}`}>
+									<Typography variant='body2'>{name}</Typography>
+								</Link>
 							)}
 
 							<Divider />

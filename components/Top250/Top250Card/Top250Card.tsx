@@ -9,13 +9,13 @@ const Top250Card = (movie: Top250Movie): JSX.Element => {
 	const { crew, imDbRating, image, rank, title, id } = movie.movie
 	return (
 		<Link passHref href={`/movies/movie/${id}`}>
-			<Box key={rank} display={'flex'} maxWidth={'150px'} bgcolor={'ThreeDFace'} data-cy={rank}>
-				<Box textAlign='match-parent'>
+			<Box key={rank} display={'flex'} justifyContent={'center'} bgcolor={'ThreeDFace'} data-cy={rank}>
+				<Box>
 					<Box>
 						<Typography>Rank: {rank}</Typography>
 						<Image src={image} width={150} height={150} />
 					</Box>
-					<Box>
+					<Box maxWidth={'150px'} textAlign={'center'}>
 						<Typography>{title} </Typography>
 						<Divider />
 						<Typography> imdb: {imDbRating}</Typography>

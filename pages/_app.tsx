@@ -5,7 +5,7 @@ import { AppProps } from 'next/app'
 import { Provider } from 'react-redux'
 
 import { store } from '@/app/store'
-import { Header } from '@/components/Home'
+import { Footer, Header } from '@/components/Home'
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
 	return (
@@ -13,6 +13,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 			<CssBaseline />
 			<Header />
 			<Component {...pageProps} />
+			<Footer />
 		</Provider>
 	)
 }
