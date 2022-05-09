@@ -1,0 +1,17 @@
+name: Node.js integration tests
+
+on:
+    pull_request:
+        branches:
+            - master
+jobs:
+    test_pull_request:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+              with:
+                  node-version: '12.x'
+            - run: yarn ci
+            - run: yarn test
+            - run: yarn format
+            - run: yarn build

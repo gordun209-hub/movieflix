@@ -5,11 +5,12 @@
 	"scripts": {
 		"dev": "next",
 		"build": "next build",
-		"start": "next start",
+		"start": "next start -p 3000",
 		"type-check": "tsc",
-		"test": "jest --watch   ",
+		"test": "jest",
 		"format": "prettier . --write --ignore-path .gitignore && git update-index --again",
-		"cypress": "cypress open"
+		"cy:run": "cypress run",
+		"cypress": " start-server-and-test start http://localhost:3000 cy:run"
 	},
 	"dependencies": {
 		"@emotion/cache": "^11.7.1",
@@ -23,7 +24,8 @@
 		"ramda": "^0.28.0",
 		"react": "^18.1.0",
 		"react-dom": "^18.1.0",
-		"react-redux": "^8.0.1"
+		"react-redux": "^8.0.1",
+		"start-server-and-test": "^1.14.0"
 	},
 	"devDependencies": {
 		"@chakra-ui/react": "^1.8.8",
